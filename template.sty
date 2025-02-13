@@ -1,0 +1,104 @@
+\usepackage[left=3cm,top=2.5cm,right=2.5cm,bottom=2.5cm]{geometry} % Page Margins
+
+% For custom lists (list of questions, etc): amsthm, etoolbox
+\usepackage{afterpage}% For controlling page placement
+\usepackage{amsthm}
+\usepackage{pifont} % Checkmark, etc
+\usepackage{etoolbox}
+
+\usepackage{graphicx} % Required for inserting images
+\usepackage{subcaption} % For subfigures
+\usepackage{amsmath}
+\usepackage{subfiles} % For Multi-File Overleaf Project. Best loaded last in the preamble
+\usepackage{indentfirst} % Indent first paragraph
+\usepackage[
+    style=nature,
+    backend=biber,
+    sorting=nyt
+]{biblatex}
+\usepackage{placeins} % For FloatBariers
+\usepackage{pdfpages}
+\usepackage{glossaries}
+\usepackage{etoc}
+\usepackage{float}
+\usepackage{fancyhdr}  % For adding headers with page numbers
+\usepackage[dvipsnames]{xcolor} % For textcolor
+\usepackage{xurl} % To break url in lines
+\usepackage{hyperref}
+\usepackage{makecell} % For line breaks within table cells
+\usepackage{booktabs} % Fancy tables
+
+\usepackage{wrapfig}
+
+% Custom style for the 'question' theorem
+\newtheoremstyle{questionstyle}
+  {\topsep}{\topsep}{}{}{\bfseries\color{red}}{.}{ } % Red color for theorem name
+  {\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}%
+     \ifstrempty{#3}%
+      {\addcontentsline{defquestion}{subsection}{#1~\thequestion}}%
+      {\addcontentsline{defquestion}{subsection}{#1~\thequestion~(#3)}}}
+
+\theoremstyle{questionstyle}
+\newtheorem{question}{Question}
+
+% List of Questions
+\makeatletter
+\newcommand\definitionquestion{Question}
+\newcommand\listdefinitionquestion{List of Questions}
+\newcommand\listofquestions{%
+  \section*{\listdefinitionquestion}\@starttoc{defquestion}}
+\makeatother
+
+% Custom style for the 'TODO' theorem
+\newtheoremstyle{todostyle}
+  {\topsep}{\topsep}{}{}{\bfseries\color{red}}{.}{ } % Red color for theorem name
+  {\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}%
+     \ifstrempty{#3}%
+      {\addcontentsline{deftodo}{subsection}{#1~\thetodo}}%
+      {\addcontentsline{deftodo}{subsection}{#1~\thetodo~(#3)}}}
+
+\theoremstyle{todostyle}
+\newtheorem{todo}{TODO}
+
+% List of ToDos
+\makeatletter
+\newcommand\definitiontodo{TODO}
+\newcommand\listdefinitiontodo{List of TODOs}
+\newcommand\listoftodos{%
+  \section*{\listdefinitiontodo}\@starttoc{deftodo}}
+\makeatother
+
+% Custom style for the 'note' theorem
+\newtheoremstyle{notestyle}
+  {\topsep}{\topsep}{}{}{\bfseries\color{black}}{.}{ } % Red color for theorem name
+  {\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}%
+     \ifstrempty{#3}%
+      {\addcontentsline{defnote}{subsection}{#1~\thenote}}%
+      {\addcontentsline{defnote}{subsection}{#1~\thenote~(#3)}}}
+
+\theoremstyle{notestyle}
+\newtheorem{note}{Note}
+
+% List of Notes
+\makeatletter
+\newcommand\definitionnote{note}
+\newcommand\listdefinitionnote{Note}
+\newcommand\listofnotes{%
+  \section*{\listdefinitionnote}\@starttoc{defnote}}
+\makeatother
+
+% Default or separate style for 'remarks'
+\newtheoremstyle{defaultstyle}
+  {\topsep}{\topsep}{}{}{\bfseries}{.}{ } % Standard style without red color
+  {\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}} % Add square at the end
+
+\theoremstyle{defaultstyle}
+\newtheorem{remark}{Remark}
+
+
+% Define footer with page number and remove header line
+\fancypagestyle{mypdfstyle}{
+  \fancyhf{}  % Clear the header and footer
+  \fancyfoot[C]{\thepage}  % Centered page number in the footer
+  \renewcommand{\headrulewidth}{0pt}  % Remove the header line
+}

@@ -1,0 +1,26 @@
+*.aux
+*.bcf
+*.defquestion
+*.deftodo
+*.log
+*.gz
+*.xml
+*.toc
+*.bbl
+*.blg
+*.defnote
+*.fls
+*.fdb_latexmk
+*.glo
+*.ist
+*.maf
+*.mtc
+*.mtc0
+*.ptc
+*.bbl-SAVE-ERROR
+*.bcf-SAVE-ERROR
+*.out
+
+# Sinc Google Drive
+.tmp.driveupload
+.tmp.drivedownload

@@ -1,0 +1,75 @@
+\documentclass[11pt]{article}
+\usepackage{../template}
+
+\graphicspath{ {./img/} }
+\addbibresource{../references.bib}
+
+\begin{document}
+
+\begin{enumerate}
+    \item T-Type channels
+    \begin{enumerate}
+        \item First order kinetics
+        \begin{itemize}
+            \item We need data for deinactivation (no idea about the function to fit). Slow time
+            constant is scaled version of $\tau_{deinactivation}$
+            \item First order kinetics might be sufficient for our purposes
+        \end{itemize}
+        
+        \item Fitting Jeong 2015
+        \begin{itemize}
+            \item (2.2.1) Fitting steady state inactivation/activation: I doubt that they scaled
+            activation, so I assumed, that they plotted $m^3$ for activation
+            \item (2.2.2) $m^3$ dynamics for activation is also indicated by the time constant
+            of tail currents (apart from similar models in the literature). Time constant for
+            one gate will be three times slower, as the deactivation will occur if any of the
+            three channels is deinactivated. Three times tau deactivation at -50mV is approximately
+            equal to tau activation at the same test potential.
+            \item Took values for deinactivation from another paper. Currently modelled as the
+            discontinuous jump at -50mV. But this might be not very good approach
+            (will be important when I move to the neuronal model)
+        \end{itemize}
+
+        \item Current
+        \begin{itemize}
+            \item I-V relationship should be important to have biologically plausible model.
+            Especially for the T-Type current, as the bursts lay on top of them
+            \item Ohmic current cannot reproduce I-V relationship correclty. Switching from Ohmic
+            current to Constant field equation did better job
+            \item This was described in one of the papers. Was also true iin our case
+            \item I assumed that I-V in Jeong 2015 is transient I-V (not steady sate). It was not
+            explicitely mentioned what they plotted, but from the text it seemed so.
+        \end{itemize}
+
+        \item Need to scale gating functions
+        \begin{itemize}
+            \item Patch clamp in Jeong was done with 10mM $Ca^{2+}$ concentration. In drosophila
+            $[Ca]_{o}$ is $0.5mM$
+            \item The gating variables depend on the $Ca^{2+}$ concentration outside membrane
+            \item Here I only fit $m_\infty$, $\tau_m$ (using function 'curve\_fit' to fit the
+            IV relationship). Generally, other variables might need shift, but I am not sure whther
+            it is a good idea to use 'curve\_fit' instead of correcting them based on the
+            literature.
+        \end{itemize}
+    \end{enumerate}
+
+
+    \item Model
+    \begin{enumerate}
+        \item Wang 1994. Idea - start simple $\rightarrow$ make more complex: What are the main components?
+        \begin{itemize}
+            \item Resting membrane potential is at -60 mV (instead of -49mV as in R5)
+            \item h-current is not necessary for LTS (generally, removal of h current
+            did not change much in the presented set of parameters)
+            \item Block Na channels results in LTS, but amplitude is <-40mV
+            \item Authors specifically set persistent sodium to drive postinhibitory reboud
+            spike (Na spike). Without it neuron will not reach spiking threshold
+            \item If one does not block potassium channels along with sodium ones, HH-type Ik takes over
+            LTS and Ca spike is not visible.
+        \end{itemize}
+    \end{enumerate}
+
+\end{enumerate}
+
+
+\end{document}

@@ -1,0 +1,35 @@
+\documentclass[11pt]{article}
+\usepackage{../../template}
+
+\graphicspath{ {./img/} }
+\addbibresource{../../references.bib}
+
+\begin{document}
+
+\includepdf[height=\textheight,pagecommand={
+  \thispagestyle{mypdfstyle}  % Apply custom footer with page number
+}]{Handwritten Notes/KeepInMinds.pdf}
+
+\tableofcontents
+
+\subfile{introduction.tex}
+
+\newpage
+\subfile{Notes/R5/t_type_calcium_channel.tex}
+
+\newpage
+\subfile{Notes/R5/sodium_and_potassium_channels.tex}
+
+\newpage
+\subfile{Notes/R5/neuron_model.tex}
+
+\newpage
+\subfile{Notes/general_notes.tex}
+
+% \newpage
+% \subfile{Notes/papers.tex}
+
+\newpage
+\printbibliography
+
+\end{document}

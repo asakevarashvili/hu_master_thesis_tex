@@ -1,0 +1,131 @@
+\documentclass[11pt]{article}
+\usepackage[left=3cm,top=2.5cm,right=2.5cm,bottom=2.5cm]{geometry} % Page Margins
+
+\usepackage[dvipsnames]{xcolor} % For textcolor
+% For custom lists (list of questions, etc): amsthm, etoolbox
+\usepackage{amsthm}
+\usepackage{etoolbox}
+\usepackage{hyperref}
+
+\newtheoremstyle{questionstyle}
+  {\topsep}{\topsep}{}{}{\bfseries\color{red}}{.}{ } % Red color for theorem name
+  {\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}%
+     \ifstrempty{#3}%
+      {\addcontentsline{defquestion}{subsection}{#1~\thequestion}}%
+      {\addcontentsline{defquestion}{subsection}{#1~\thequestion~(#3)}}}
+
+\theoremstyle{questionstyle}
+\newtheorem{question}{Question}
+
+% Default or separate style for 'remarks'
+\newtheoremstyle{defaultstyle}
+  {\topsep}{\topsep}{}{}{\bfseries}{.}{ } % Standard style without red color
+  {\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}} % Add square at the end
+
+\theoremstyle{defaultstyle}
+\newtheorem{remark}{Remark}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+
+\urlstyle{same}
+
+
+\begin{document}
+
+\begin{remark}
+    \textbf{Manuscript line 146:} + in rested flies
+\end{remark}
+
+\begin{remark}
+    \textbf{Ext. Fig. 7:} In the caption Fig. 3i is referenced, but there is no Fig. 3i in the manuscript
+\end{remark}
+
+\begin{remark}
+    \textbf{Ext. P. 26, Simulations}
+    \begin{itemize}
+        \item “In Extended data Fig. 7”: Which subfigure?
+        \item “In Fig. 3k, the correlation…”: Figure does not exist
+        \item “...mean and standard deviation were shown (Fig. 3j,m)”: Fig. 3j,m does not exist
+    \end{itemize}
+\end{remark}
+
+\begin{remark}
+    \textbf{Man. Line 701:} Hemibrain connectome data. Version 1.2.1 should be written instead of 2.1
+\end{remark}
+
+
+\begin{itemize}
+    \item \textbf{Man. P.24:} “including autapses for helicon neurons but excluding autapses for the R5 neurons”
+    \begin{question}
+        \begin{itemize}
+            \item neuprint does not have any autapses
+            \item In Lauras thesis there are autapses. Fig.2.31 p.36 (44)
+            \item "Connectome ... provided by Raquel Grimalt"
+            \item The connectome plots based on neuprint are similar, but not exactly the same as in the manuscript, further supporting the assumption that the original dataset was either not derived from neuprint, or they changed connectome. Furthermore, the manuscript says that version 2.1 was used. The most up-to-date version on the website is 1.2.1. This is either typo, or somehow I do not have access to the newest dataset
+            \item The distribution of weights for the helicon cells does not seem to be Gaussian, but poissonian. The difference between the frequencies might have resulted because of the random generator and small number of connections between the helicon cells. However, the simulations showed, that if I choose the weights multiple times, the oscillation frequency does not change much between different simulations
+            \item Matches in synaptic connections (Manuscript vs Neuprint): R5-Helicon, Helicon-R5
+            \item Differences in synaptic connections(Manuscript vs Neuprint): R5-R5, Helicon-Helicon
+            \item Matches in Coupling(Manuscript vs Neuprint): R5-R5 (approx), R5-Helicon
+            \item Differences in Coupling(Manuscript vs Neuprint): Helicon-R5, Helicon-Helicon
+            \item Matches in scaling(Manuscript vs Lab rotation): R5-R5, R5-Helicon
+            \item Differences in scaling (Manuscript vs Lab rotation): Helicon-R5, Helicon, Helicon
+        \end{itemize}
+    \end{question}
+
+
+    \item \textbf{Manuscript line 146:} “R5 cells were optogenetically stimulated at 1 Hz that reduced locomotor activity. This is in line with R5 training the involved neural networks to facilitate flies’ sleep by \textbf{potentially filtering out sensory stimuli.}”
+    \begin{question}
+        “Potentially filtering out sensory stimuli” - where is sensory stimuli? How do we come to this conclusion? Or is this just an assumption not related to the current experimental paradigm?
+    \end{question}
+
+    \item \textbf{Manuscript line 165:} stimulating R5 neurons at 0.1 Hz did not lead to a measurable impact on the flies’ behavior.
+    \begin{question}
+        How about stimulation with higher frequencies than 1 Hz?
+    \end{question}
+
+    \item \textbf{Manuscript Line 199:} ...indicating that the shifted state could result from interferences with sensory input.
+    \begin{question}
+        What about pacemaker cells? Can the difference be explained by such cells if they exist? Also, if they do, will they shut down in the ex-vivo recordings?
+        \begin{itemize}
+            \item \href{https://pmc.ncbi.nlm.nih.gov/articles/PMC6793667/#:~:text=of%20clock%20neurons-,D.,DN3%20cells)%20(Fig.}{Circadian pacemaker cells in drosophila} (Functional Analysis of Circadian Pacemaker Neurons in Drosophila melanogaster)
+        \end{itemize}
+    \end{question}
+
+    \item \textbf{Manuscript Lines 200 and 229:} Shifted state did not occur in the ex-vivo recordings + only shifted state occurred during isolated homeostatic sleep drive.
+    \begin{question}
+        \hphantom\newline
+        \begin{itemize}
+            \item Thus, a shifted state can be the result not only from the external stimuli but could be explained by some internal drives 
+        
+            \item Again, can those drives be present in ex-vivo recordings? What are the neural bases of homeostatic sleep pressure in Drosophila?
+        \end{itemize}
+    \end{question}
+
+    \item \textbf{Manuscript Line 244:} …this could be in line with an absence of sensory input facilitating the synchronized state.
+    \begin{question}
+        Could this be a consequence of weakly coupled oscillators? If there is no input, the neurons synchronize, otherwise they do not as they receive sensory input that pushes the system out of synchrony.
+    \end{question}
+
+
+    \item \textbf{Manuscript Line 287:} Indeed, our simulation resulted in SWA oscillations at night for both helicon and R5, while helicon was not oscillating in the day-time settings (Fig. 4b and Extended Data Fig. 7d,e). Moreover, both networks were highly synchronized only at night (Fig. 4c), matching ex vivo observations and the ‘synchronized state’ in in vivo recordings (Fig. 3c,d,h).
+    \begin{question}
+        Were not the regimes of the activities of R5/helicon cells at day/night set “by hand”?
+    \end{question}
+    
+    \item Model of the external input:
+    \begin{question}
+        Why does external current not go through synapse?
+    \end{question}
+
+\end{itemize}
+
+
+
+\end{document}

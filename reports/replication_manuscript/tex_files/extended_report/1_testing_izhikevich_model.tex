@@ -1,0 +1,37 @@
+\documentclass[../../extended_report.tex]{subfiles}
+\graphicspath{{\subfix{../img/}}}
+
+\begin{document}
+
+\section{Testing Izhikevich Model}
+
+\subsection{Normalizing $\sigma$ of the External Current}\label{remark_wiener_process}
+
+Generally, if one changes the simulation step size, one should adapt the $\sigma$ of the Gaussian white noise. The reason behind this is, that the variance of the Wiener process (or, Brownian motion) is:
+\begin{equation*}
+    var(W_{\Delta t})=\Delta t
+\end{equation*}
+where $\Delta W(t) \sim N(0, \Delta t)$
+For the scaled Wiener process ($X = \sigma W$):
+\begin{equation*}
+    var(X_{\Delta t}) = var(\sigma W_{\Delta t}) = \sigma^2 var(W_{\Delta t}) = \sigma^2 \Delta t
+\end{equation*}
+Now, let's $\Delta t_1$ be the step size and $\sigma_1$ be the standard deviation. Variance within the time unit equal to $\Delta t_1$ will be:
+\begin{equation*}
+    var(X_{\Delta t_1}) = \sigma_1^2 \Delta t_1
+\end{equation*}
+If we change the step size to $\Delta t_2 = k \Delta t_1$, then the variance within the time unit $\Delta t_1$ will equal to:
+\begin{todo}
+    Finish Remark 1
+\end{todo}
+\qed
+
+\begin{remark}\label{remark-normalizing_std_external_current}
+    For the simulations, the standard deviation was normalized with regard to the simulation step size ONLY for helicon cells.
+    \begin{todo}
+        Write the reasoning and reference the pictures
+    \end{todo}
+\end{remark}
+
+
+\end{document}
