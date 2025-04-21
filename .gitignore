@@ -21,6 +21,15 @@
 *.bcf-SAVE-ERROR
 *.out
 
+*.acn
+*.acr
+*.alg
+*.glg
+*.gls
+*.lof
+*.lot
+
 # Sinc Google Drive
 .tmp.driveupload
 .tmp.drivedownload
+*(busy)

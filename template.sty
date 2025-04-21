@@ -1,12 +1,19 @@
+% TODO: Uncomment this!!!!
 \usepackage[left=3cm,top=2.5cm,right=2.5cm,bottom=2.5cm]{geometry} % Page Margins
+% \usepackage[left=1.5cm,top=1.5cm,right=1.5cm,bottom=1.5cm]{geometry} % Page Margins
+% \usepackage[a4paper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
 
+\usepackage{setspace}
+\usepackage{times}
 % For custom lists (list of questions, etc): amsthm, etoolbox
+\usepackage[acronym]{glossaries}
 \usepackage{afterpage}% For controlling page placement
 \usepackage{amsthm}
 \usepackage{pifont} % Checkmark, etc
 \usepackage{etoolbox}
-
+\usepackage{bm} % Bold math
 \usepackage{graphicx} % Required for inserting images
+\usepackage[labelfont=bf]{caption}
 \usepackage{subcaption} % For subfigures
 \usepackage{amsmath}
 \usepackage{subfiles} % For Multi-File Overleaf Project. Best loaded last in the preamble
@@ -102,3 +109,5 @@
   \fancyfoot[C]{\thepage}  % Centered page number in the footer
   \renewcommand{\headrulewidth}{0pt}  % Remove the header line
 }
+
+\spacing{1.5}

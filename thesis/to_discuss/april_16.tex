@@ -1,0 +1,73 @@
+\documentclass[11pt]{article}
+\usepackage{../../template}
+
+\addbibresource{../references.bib}
+
+\begin{document}
+
+\begin{enumerate}
+    \item Comparing several models: Why we observe increase in resting membrane potential
+    for one of the models (Godlman 2001), but not for others?
+
+    \item How can one switch from bursting to spiking? Target parameters:
+    \begin{itemize}
+        \item intracellular calcium concentration (effectively setting V\_ca if model is Ohmic)
+        \item max conductance of T-Type channels
+        \item max conductance of L-type channels
+        \item max conductance for persistent sodium channel
+    \end{itemize}
+    
+    \item Helicon-R5 synchronization: why did we observe 100ms delay in the model after
+    helicon activation?
+    \begin{itemize}
+        \item Shifted state was observed, with helicon cells leading oscillation. Hoever, this
+        does not align with the assummption, that R5 causes SWA in helicon.
+        \item Possible mechanism: 'early activation' via gap junctions (as described in section 1)
+        \item For now, correlation was used to observe synchronization. However,
+        correlation does not mean causality.
+        \item It might be interesting
+        to see the time lag correlation between dFSB-helicon and dFSB-R5 in the SD condition.
+        Or even better - granger causality.
+        (Reassessing hierarchical correspondences between brain and deep networks through direct interface
+        \url{https://www.science.org/doi/10.1126/sciadv.abm2219})
+        \item Citations from Lauras thesis:
+        \begin{itemize}
+            \item "In the Down state, Helicon is entrained to R5's compound rhythmicity via excitatory
+            coupling. This leads to a relatively short offset (7 ms) between the two signals"
+            \item "For Helicon in the Down state, we find a much larger and negative offset of 
+            -77 ms (fig. 2.34a). We assume this is because Helicon now also receives inhibitory inputs
+            from R5 neurons which prevent Helicon from firing and therefore lead to a small anti-phase
+            correlation between the two signals."
+        \end{itemize}
+        \item Citation From Manuscript:
+        \begin{itemize}
+            \item (Simulations). "This is also in line with our experimental data, which show
+            that the balance controls the degree of synchronization between excitatory and inhibitory
+            drive and determines whether the networks are in the shifted or synchronized configuration"
+        \end{itemize}
+        \item Remarks
+        \begin{itemize}
+            \item In the Lauras thesis, in the second note it should be written "Up State" instead of
+            "Down State". However, this state
+            corresponds to daytime rather than night. Thus this will not explain the experimental
+            observations (shifted state at night)
+            \item In manuscript, 1) there is no inhibition from R5 to helicon at night (in the model). Thus,
+            the temporal shift might be due to the synaptic time constant between helicon and R5,
+            rather than interplay between excitation and inhibition between R5 and Helicon.
+            Synaptic time constant was set to be 100 ms (similar to resulted time delay between helicon and R5).
+            Thus, when additional input was provided to helicon, here helicon might drive R5 and R5 might burst due to intrinsic properties.
+        \end{itemize}
+    \end{itemize}
+
+    \item Raccuglia: frequency of R5 activation is important. Actitation was done by optogenetics. If bursting is
+    mediated by hyperpolarization activated current, then it can be that optogeneetically one directly
+    activates fast system. Thus, you will need specific frequency of activation to induce similar
+    effect (intrinsic bursting 1Hz).
+
+    \item What are the "connection paths" from R5 to dFSB cells based on connectome (directed graph)?
+    E.g. R5 - Helicon - dFSB. Should be easy to look into
+\end{enumerate}
+
+
+
+\end{document}

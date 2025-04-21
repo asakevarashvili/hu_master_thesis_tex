@@ -22,5 +22,13 @@
       "**/*.bbl-SAVE-ERROR": true,
       "**/*.bcf-SAVE-ERROR": true,
       "**/*.out": true,
+      "**/*.acn": true,
+      "**/*.acr": true,
+      "**/*.alg": true,
+      "**/*.glg": true,
+      "**/*.gls": true,
+      "**/*.lof": true,
+      "**/*.lot": true,
+      "**/*(busy)": true,
   },
 }

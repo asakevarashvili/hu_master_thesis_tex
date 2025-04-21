@@ -8,6 +8,27 @@
 \etocsettocstyle{\subsection*{\contentsname}}{}
 \localtableofcontents
 
+
+\newpage
+\color{orange}
+
+\textcolor{red}{Main results}:
+\begin{itemize}
+    \item Estimated number of activation gates for Drosophila T-Type ion channels is 3.
+    \item Modelling the ion channel using Ohmic relationship between current and voltage
+    did not procude good fits to observed current-voltage (I-V) relationship.
+    \item The current-voltage relationship was reproduced when
+    Goldman-Hodgkin-Katz (GHK) voltage flux equation was used instead of Ohmic current
+    \item GHK equation models explicit relationship between current, voltage, temperature and
+    intra-/extracellular ion concentrations.
+    \item The fit of simulated I-V relatoinship to the observed data was improved when
+    the steady-state activation function was shifted along $V$ axis,
+    and corresponding time constant was scaled and shifted along $V$ axis (parameters for
+    shifting and scaling were taken to be free parameters during optimization)
+\end{itemize}
+
+\color{black}
+
 \subsection{Model}
 
 T-Type Ca$^{2+}$ current was modelled using constant-field equation \cite{huguenardSimulationCurrentsInvolved1992}:
@@ -310,12 +331,39 @@ RK45. For the simulatins presented in this section, RK45 method was used.
 
 \subsubsection{Ohmic Current vs Constant-Field Equation}
 
+\color{orange}
+
+\begin{itemize}
+    \item How can one fit voltage-current (I-V) relationship?
+    \begin{itemize}
+        \item Ohmic current: $I(V) = g(V) (V - V_{ion})$, where $g(V) = \hat{g} m_T(V)^3 h_T(V)$, $g$ is conductance,
+        $\hat{g}$ maximal conductance, $m_T(V)$ ($h_T(V)$) is variable corresponding to
+        activation (inactivation) gate.
+        \item Constant field equation (also known as Goldman-Hodgkin-Katz (GHK) voltage flux equation): Equation \ref{eq_constant_field_equation}
+        \item The recorded voltage traces and transient I-V relationship to voltage steps is given in Figure \ref{fig:i_v_relationship_jeong}.
+        \item Voltage step protocol: The membrane potential was held at holding potential $-90$ mV,
+        followed by $150$ms step pulses that varied from $-80$-$40$mV with $10$mV increments
+        (see e.g. Figure \ref{fig_t_type_ohmic_voltage_traces}, second plot from top). The response
+        of the neuron to the voltage steps was recorded (see e.g. Figure \ref{fig_t_type_ohmic_voltage_traces}, second figure from top).
+        \item Observed I-V relationship was replicated for GHK model, but not for Ohmic current
+        (Figure \ref{fig_t_type_voltage_step_ohmic_vs_constant_field}).
+        % \item The sharp transient at the end of the pulse in recordings (Fig. \ref{fig:i_v_relationship_jeong})
+        % is most likely due to passive membrane properties. The membrane time constant of R5 neuons is not known.
+        % Arbitrarily incorporating $\tau=10$ms time constant reproduced the sharp transient (not shown here).
+        % However 1) as Drosophila T-Type channels were expressed in frogs (Oocites), fitting membrane time constant
+        % will not be helpful in modelling Drosophila R5 neurons; 2) The passive membrane time constant
+    \end{itemize}
+\end{itemize}
+
+\color{black}
+
 \textcolor{red}{Add text, add captions in figure \ref{fig_t_type_voltage_step_ohmic_vs_constant_field}}.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.45\textwidth]{./img/t_type_calcium_channel/iv_relationship_jeong_2015.png}
     \caption{I-V relationship of T-Type $Ca^{2+}$ current in Drosophila. Adapted from \cite{jeongCaa1TFlyTtype2015}.}
+    \label{fig:i_v_relationship_jeong}
 \end{figure}
 
 \begin{figure}[H]
@@ -360,8 +408,12 @@ RK45. For the simulatins presented in this section, RK45 method was used.
 \color{red}
 
 \begin{itemize}
-    \item $[Ca]_{outside}$ affects gating constants.
-    \item Shifted steady state activation and scaled tau activation (python function curve\_fit
+    \item $[Ca]_{outside}$, as well as solutions used during voltage-clamp experiments
+    (calcium vs barium, as well as corresponding concentations) affects gating constants,
+    including for mammalian homologes of Drosophila T-Type Ca channels.
+    \item To my knowledge, how exactly the time constants are affected for Drosophila T-Type Ca channels
+    has not been reported.
+    \item For now: shifted steady state activation and scaled tau activation (python function curve\_fit
     with initial guesses p0=[4, 0.5] for shift and scale correspondingly)
     \item m(v) to m(v-4.95)
     \item tau to tau*0.45
@@ -386,7 +438,7 @@ RK45. For the simulatins presented in this section, RK45 method was used.
         \label{fig_r5_t_type_tau_activation_scaled}
     \end{subfigure}
     
-    \caption{\textcolor{red}{Add Text}}
+    \caption{\textcolor{red}{Shifting and scaling time constants of activation gate}}
     \label{fig_r5_t_type_shifting_scaling}
 \end{figure}
 
@@ -407,7 +459,7 @@ RK45. For the simulatins presented in this section, RK45 method was used.
         \label{fig_t_type_constant_field_iv_relationship_scaled}
     \end{subfigure}
     
-    \caption{\textcolor{red}{Add Text}}
+    \caption{\textcolor{red}{Reconstructed I-V relationship after scaling and shifting activation gate time constant}}
     \label{fig_t_type_voltage_step_ohmic_vs_constant_field_scaled}
 \end{figure}
 
@@ -462,5 +514,8 @@ RK45. For the simulatins presented in this section, RK45 method was used.
         $V_{\tau_{m_T}^2}=-40$, $k_{\tau_{m_T}^2}=10$.
     }
 \end{figure}
+
+\newpage
+\printbibliography
 
 \end{document}
