@@ -10,17 +10,17 @@
 \begin{itemize}
     \item Drosophila genome has two genes predicted to encode $Na_v$ proteins: para, and
     60E (NaCP60E). However, NaCP60E null mutants showed no loss in inward sodium current,
-    suggesting that para is the putative $Na_v$ channel \cite{ravenscroftDrosophilaVoltageGatedSodium2020}.
-    \item para has 60 predicted isoforms via alternative splicing \cite{ravenscroftDrosophilaVoltageGatedSodium2020}
-    \item Para is only expressed in active neurons \cite{ravenscroftDrosophilaVoltageGatedSodium2020}
-    \item Currently I chose vales from \cite{warmkeFunctionalExpressionDrosophila1997} where
+    suggesting that para is the putative $Na_v$ channel \parencite{ravenscroftDrosophilaVoltageGatedSodium2020}.
+    \item para has 60 predicted isoforms via alternative splicing \parencite{ravenscroftDrosophilaVoltageGatedSodium2020}
+    \item Para is only expressed in active neurons \parencite{ravenscroftDrosophilaVoltageGatedSodium2020}
+    \item Currently I chose vales from \parencite{warmkeFunctionalExpressionDrosophila1997} where
     $DmNa_v$ was expressed in Xenopus ooscyte (frog). The similar was done in
-    \cite{linAlternativeSplicingVoltageGated2009}, but the values are different.
+    \parencite{linAlternativeSplicingVoltageGated2009}, but the values are different.
     \item "heterologous expression indicates that the inclusion of specific exons imparts
     characteristic gating properties to individual splice variants of $DmNa_v$ channels.
     These differences likely contribute to, and may even explain, the diversity in action
     potential firing between different neurons observed in the Drosophila CNS"
-    \item \cite{ravenscroftDrosophilaVoltageGatedSodium2020} stated in Fig. 5 that
+    \item \parencite{ravenscroftDrosophilaVoltageGatedSodium2020} stated in Fig. 5 that
     4th power exponential fit for activation resutled in time constant equal to 2.1.
     This means, that for one gate it should be 8.4.
 \end{itemize}
@@ -28,7 +28,7 @@
 
 The model and parameters for the transient and persistent $Na$ channels,
 as well as fast and slow $K$ currents were taken from
-\cite{gunayDistalSpikeInitiation2015}. All currents are modelled according to Ohm's law:
+\parencite{gunayDistalSpikeInitiation2015}. All currents are modelled according to Ohm's law:
 \begin{equation*}
     I_{c}(V,m,h) = g_{c} m_{c}^{p_c}(V) h_{c}(V) (V - V_{c})
 \end{equation*}
@@ -67,14 +67,14 @@ The parameters are given in Table \ref{table_parameters_r5_sodium_and_potassium_
 \end{table}
 
 \begin{note}
-    Similar parameters (small differences) is also given in \cite{linActivityDependentAlternativeSplicing2012}.
+    Similar parameters (small differences) is also given in \parencite{linActivityDependentAlternativeSplicing2012}.
 \end{note}
 
 \begin{itemize}
     \item K Reversal potential
     \begin{itemize}
-        \item \cite{gunayDistalSpikeInitiation2015}: -80mV
-        \item \cite{qiuCollectiveDynamicsNeural2021}: -90mV
+        \item \parencite{gunayDistalSpikeInitiation2015}: -80mV
+        \item \parencite{qiuCollectiveDynamicsNeural2021}: -90mV
     \end{itemize}
 \end{itemize}
 

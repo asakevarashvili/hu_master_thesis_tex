@@ -6,3 +6,7 @@
 {"rule":"A_INFINITIVE","sentence":"^\\QRather, the undershoot depends on the dynamical properties of the system, as it will be discussed in more detail in Section ???.\\E$"}
 {"rule":"A_INFINITIVE","sentence":"^\\QFurthermore, the undershoot depends on the dynamical properties of the system, as it will be discussed in more detail in Section 2.\\E$"}
 {"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\QIt has been demonstrated that the same could be achieved by modulation of maximal conductances of voltage-gated transient- and calcium-gated potassium channels \\E(?:Dummy|Ina|Jimmy-)[0-9]+\\Q.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\Q[Classification of intrinsically bursting neurons by neuro-computational features] Classification of intrinsically bursting neurons by neuro-computational features.\\E$"}
+{"rule":"ENGLISH_WORD_REPEAT_BEGINNING_RULE","sentence":"^\\QIn contrast, single-compartment models assume a uniform distribution of ion channels and represent neurons as a single, uniform unit.\\E$"}
+{"rule":"MORFOLOGIK_RULE_EN_US","sentence":"^\\Q./chapters/2_bio_backg_and_exp_motiv.tex\\E$"}
+{"rule":"NON_STANDARD_WORD","sentence":"^\\Q./chapters/5_t_type_calcium_channel.tex\\E$"}

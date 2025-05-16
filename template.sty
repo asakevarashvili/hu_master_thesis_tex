@@ -19,7 +19,7 @@
 \usepackage{subfiles} % For Multi-File Overleaf Project. Best loaded last in the preamble
 \usepackage{indentfirst} % Indent first paragraph
 \usepackage[
-    style=nature,
+    style=authoryear,
     backend=biber,
     sorting=nyt
 ]{biblatex}
@@ -35,7 +35,13 @@
 \usepackage{makecell} % For line breaks within table cells
 \usepackage{booktabs} % Fancy tables
 
+\usepackage{tikz} % For diagrams
+
 \usepackage{wrapfig}
+
+\setcounter{tocdepth}{2} % Include only subsections in table of content
+
+\numberwithin{equation}{section}
 
 % Custom style for the 'question' theorem
 \newtheoremstyle{questionstyle}
