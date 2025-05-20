@@ -11,9 +11,9 @@
 % \setcounter{page}{1}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Mathematical and Computational Background}
+\section{Mathematical and Computational Background} \label{sec:math_background}
 
-As discussed in Section \ref{sec:sleep_and_r5_network}, R5 neurons exhibit variety of response properties under different experimental conditions: they show tonic firing during day, $\sim1$Hz bursting at night and after sleep deprivation, and low-frequency spiking (potentially mediated by $Ca^{2+}$ channels) following the blockade of $Na^+$ channels. The biological mechanisms underlying these responses and the transition between them are poorly understood. This section reviews the background on bursting neurons from mathematical and computational perspectives and concludes with suggestions for modeling the behavior of R5 neurons.
+As discussed in Section \ref{sec:sleep_and_r5_network}, R5 neurons exhibit variety of response properties under different experimental conditions: they show tonic firing during day, $\sim1$Hz bursting at night and after sleep deprivation, and low-frequency spiking (potentially mediated by Ca$^{2+}$ channels) following the blockade of $Na^+$ channels. The biological mechanisms underlying these responses and the transition between them are poorly understood. This section reviews the background on bursting neurons from mathematical and computational perspectives and concludes with suggestions for modeling the behavior of R5 neurons.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Models of Bursting Neurons}
@@ -78,9 +78,9 @@ In general, the distribution and/or concentration of the ion channels varies acr
 %!TODO!: Citation
 In addition, neuronal morphology has been shown to enhance robustness to parameter variations and significantly influence neuronal computations, including synaptic integration, as well as initiation and propagation of action potential.
 %!TODO!: Citations after each part
-Multicompartment models account for these spatial variations by modeling different neuronal compartments and interactions between them. In contrast, single-compartment models assume a uniform distribution of ion channels and represent neurons as a single, uniform unit. Nevertheless, single-compartment neurons have been found to be sufficient for replicating many experimental observations.
+Multicompartment models account for these spatial variations by modeling different neuronal compartments and interactions between them. In contrast, single-compartment models assume a uniform distribution of ion channels and represent neurons as a single, uniform unit. Nevertheless, single-compartment models have been found to be sufficient for replicating many experimental observations.
 %!TODO!: Citation
-Although multicompartment models are more biologically plausible and can better reproduce experimental data, single-compartment neurons are more computationally efficient (see also discussion).
+Although multicompartment models are more biologically plausible and can better reproduce experimental data, single-compartment models are more computationally efficient (see also discussion).
 %!TODO!: Citation
 
 
@@ -316,7 +316,7 @@ are incorporated in the model by recalculating the reversal potential at each st
 For some ion channels, Equation \ref{eq:ohmic_current} is sufficient to reproduce experimentally obtained
 voltage-current relationships. However, for other channels Ohmic current does not provide good
 estimates and \gls{ghk} current equation should be used to obtain better fit between
-experimental data and simulations \parencite{huguenardSimulationCurrentsInvolved1992} (see also Section \ref{sec:modeling_t_type_channel} on modeling \textit{Drosophila} T-type $Ca^{2+}$ ion channels).
+experimental data and simulations \parencite{huguenardSimulationCurrentsInvolved1992} (see also Section \ref{sec:modeling_t_type_channel} on modeling \textit{Drosophila} T-type Ca$^{2+}$ ion channels).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Modeling conductance: activation and inactivation gates} \label{subsubsec:modeling_conductance}
@@ -355,7 +355,7 @@ In equations \ref{eq:differential_gating_wtr_rates} and \ref{eq:differential_gat
     \label{fig:gating_first_order_kinetics}
 \end{figure}
 
-The functions for $x_\infty$ and $\tau_x$, as well as exponents $p$ and $q$ are generally derived from voltage-clamp recordings, while the maximal conductance is typically chosen to fit the model output to the experimental data (see Section \ref{sec:modeling_t_type_channel} for the modeling of T-type $Ca^{2+}$ channels).
+The functions for $x_\infty$ and $\tau_x$, as well as exponents $p$ and $q$ are generally derived from voltage-clamp recordings, while the maximal conductance is typically chosen to fit the model output to the experimental data (see Section \ref{sec:modeling_t_type_channel} for the modeling of T-type Ca$^{2+}$ channels).
 
 Equation \ref{eq:differential_gating_steadyst_timeconst} is sometimes written as
 \begin{equation}\label{eq:differential_gating_steadyst_timeconst_q10}
@@ -376,8 +376,10 @@ Finally, Equation \ref{eq:conductance_wrt_gating_variables} assumes that, in the
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Oscillations after \glsentrytext{ttx} Application} \label{subsec:math_backg_ttx_oscillations}
 
+\textcolor{red}{Move this to the results!!!}
+
 As shown Section \ref{subsubsec:experiment_ttx_t_type_block}, after $Na$ channels were blocked
-R5 neurons exhibited slow oscillations likely mediated by $Ca^{2+}$ channels. The width of the spikes ($\sim 100$ms) was observed to be considerably smaller than interspike intervals ($\sim 2$s).
+R5 neurons exhibited slow oscillations likely mediated by Ca$^{2+}$ channels. The width of the spikes ($\sim 100$ms) was observed to be considerably smaller than interspike intervals ($\sim 2$s).
 Such dynamics may arise through one of the following mechanisms: during the interspike interval
 \begin{enumerate}
     \item the trajectory may pass near the bifurcation of equilibria (Hopf of \gls{snic}), where time derivatives of all variables are close to $0$, or

@@ -8,13 +8,13 @@
 
 \subsubsection{Preface} \label{subsec:model_t_type_preface}
 
-In conductance-based models, different authors have used different formulations for T-type $Ca^{2+}$ channels. These differences include whether activation kinetics are treated as instantaneous, the voltage ranges at which activation and inactivation gates operate, and the number of activation gates included in the model. The differences in parameters might be attributed to modelling neurons in different animal species.
+In conductance-based models, different authors have used different formulations for T-type Ca$^{2+}$ channels. These differences include whether activation kinetics are treated as instantaneous, the voltage ranges at which activation and inactivation gates operate, and the number of activation gates included in the model. The differences in parameters might be attributed to modelling neurons in different animal species.
 % !TODO!: Citations
 
 Furthermore, analytical and computational studies have reported that using simplified dynamics of the ion channels in the conductance based models, by assuming instantaneous kinetics, may compromize robustness of the model to parameter variations and reduce its' robustness to noise. % !TODO!: Citations
 
 To construct biologically plausible model for \textit{Drosophila} R5 neurons which is robust to parameter variations, it would be preferable to use ion channel parameters derived directly from experimental data in \textit{Drosophila}, without simplifying the underlying kinetics.
-This section presents a model for the T-type $Ca^{2+}$ ion channels based on the experimental results reported by Jeong and colleagues \parencite{jeongCaa1TFlyTtype2015}. The paper provides
+This section presents a model for the T-type Ca$^{2+}$ ion channels based on the experimental results reported by Jeong and colleagues \parencite{jeongCaa1TFlyTtype2015}. The paper provides
 information about the values for activation/inactivation variables, as well as time constants
 as a functions of membrane potentials. The reported values are plotted in Figure \ref{fig:data_from_jeong}.
 
@@ -158,7 +158,7 @@ Therefore, time constants obtained from fitting tail currents to a single expone
 \noindent\textbf{Estimating number of activation gates}
 
 As discussed above, due to specifics of the experimental procedure, the activation time constant measured by Jeong and colleagues reflecs the time constant of single acivation gate above $-50$mV. However, at potentials below $-50$mV the measured time constant scales linearly with the nubmer of activation gates. Since the authors performed both of the above-mentioned measurements at a test potential of $-50$mV, 
-it is possible to estimate the number of activation gates by comparing the corresponding values of the time constants (Figures \ref{fig:data_from_jeong}b-c). When the tail currents were fitted with single exponential function, the estimated time constant at $-50$mV was $\sim 4$ms, whereas the value obtained from the second procedure at the same test potential was $\sim12$ms. Therefore, the number of activation gates in T-type $Ca^{2+}$ channels in \textit{Drosophila} is $12/4=3$.
+it is possible to estimate the number of activation gates by comparing the corresponding values of the time constants (Figures \ref{fig:data_from_jeong}b-c). When the tail currents were fitted with single exponential function, the estimated time constant at $-50$mV was $\sim 4$ms, whereas the value obtained from the second procedure at the same test potential was $\sim12$ms. Therefore, the number of activation gates in T-type Ca$^{2+}$ channels in \textit{Drosophila} is $12/4=3$.
 
 \vspace*{0.3cm}
 \noindent\textbf{Estimating activation time constant}
@@ -266,7 +266,7 @@ The current through the ion channel was first modelled using Ohm's law (see Equa
 
 In the Nernst equation, $R$ is the universal gas constant
 ($\approx 8.3145 J/K^\circ \cdot \text{Mol}$), $T$ is temperature is Kelvin (here, $273.16+25=298.16^{\circ}$), $F$ is Faraday's constant
-($\approx 9.6485 \times 10^{4} C\cdot \text{mol}^{-1}$), $z$ is the valence of the ion ($z=2$ for $Ca^{2+}$). These yeilded a calcium reversal potential of $V_{Ca}\approx 128$mV. The maximal conductance was set to $0.4$ ms/cm$^2$. However, the exact value is not critical in this context, as \textcite{jeongCaa1TFlyTtype2015} reported the amplitude of the transient current in relative terms, normalized to the maximum observed value.
+($\approx 9.6485 \times 10^{4} C\cdot \text{mol}^{-1}$), $z$ is the valence of the ion ($z=2$ for Ca$^{2+}$). These yeilded a calcium reversal potential of $V_{Ca}\approx 128$mV. The maximal conductance was set to $0.4$ ms/cm$^2$. However, the exact value is not critical in this context, as \textcite{jeongCaa1TFlyTtype2015} reported the amplitude of the transient current in relative terms, normalized to the maximum observed value.
 
 Figure \ref{fig_t_type_ohmic_voltage_traces} shows the test potentials applied to the model neurons, along with the simulated current trace and dynamics of the activation and inactivation variables in the case when the current was simulated via Ohmic current. Figure \ref{fig_t_type_ohmic_iv_relationship} shows corresponding transient I-V relationship.
 
@@ -302,7 +302,7 @@ Figure \ref{fig_t_type_ohmic_voltage_traces} shows the test potentials applied t
         \label{fig_t_type_constant_field_iv_relationship}
     \end{subfigure}
     
-    \caption{Ohm's low vs constant-field equation for T-Type $Ca^{2+}$ current.}
+    \caption{Ohm's low vs constant-field equation for T-Type Ca$^{2+}$ current.}
     \label{fig_t_type_voltage_step_ohmic_vs_constant_field}
 \end{figure}
 
@@ -334,8 +334,8 @@ All constants ($R$, $T$, $F$, $z$, $[Ca]_i$, $[Ca]_o$) were set to the same valu
 The comparison of the simulated and experimentally obtained I-V relationships is showed in Figures \ref{fig_t_type_constant_field_voltage_traces} and \ref{fig_t_type_constant_field_iv_relationship}. Consisent with the previous reports \parencite{huguenardSimulationCurrentsInvolved1992}, modeling calcium current through the T-type channel using the \gls{ghk} current equation yeilded better estimates than the Ohmic model. However, in the case of \gls{ghk} current, the model did not accurately estimate the transient current amplitudes at more hyperpolarized test potentials.
 % !TODO!: cite several in "previous reports"
 
-There may be several factors contributing to the difference between the simulated and experimental I-V relationships. T-type $Ca^{2+}$ channels are also permeable to $Ba^{2+}$, and Jeong and colleagues used $Ba^{2+}$ recording solution to estimate steady state activation and inactivation curves.
-In mammalian homologes of T-type $Ca^{2+}$ channels, it has been demonstrated that half maximal activation and inactivation potentials (i.e. the membrane potential at which $x_{\infty}=0.5$ for $x\in {m_T, h_T}$), as well as corresponding time constants, can vary depending on whether $Ca^{2+}$ or $Ba^{2+}$ is used during estimation of kinetic variables \parencite{khanPermeationGatingCaV312008}.
+There may be several factors contributing to the difference between the simulated and experimental I-V relationships. T-type Ca$^{2+}$ channels are also permeable to $Ba^{2+}$, and Jeong and colleagues used $Ba^{2+}$ recording solution to estimate steady state activation and inactivation curves.
+In mammalian homologes of T-type Ca$^{2+}$ channels, it has been demonstrated that half maximal activation and inactivation potentials (i.e. the membrane potential at which $x_{\infty}=0.5$ for $x\in {m_T, h_T}$), as well as corresponding time constants, can vary depending on whether Ca$^{2+}$ or $Ba^{2+}$ is used during estimation of kinetic variables \parencite{khanPermeationGatingCaV312008}.
 
 To test if this effect could explain the difference, a voltage shift $V_s$ was applied to the activation variable, and the corresponding time constant was scaled by $b$:
 \begin{align}
@@ -363,7 +363,7 @@ Additional fitting was performed by also shifting the inactivation steady-state 
 % \begin{figure}[H]
 %     \centering
 %     \includegraphics[width=0.45\textwidth]{../../reports/workflow/img/t_type_calcium_channel/iv_relationship_jeong_2015.png}
-%     \caption{I-V relationship of T-Type $Ca^{2+}$ current in Drosophila. Adapted from \parencite{jeongCaa1TFlyTtype2015}.}
+%     \caption{I-V relationship of T-Type Ca$^{2+}$ current in Drosophila. Adapted from \parencite{jeongCaa1TFlyTtype2015}.}
 %     \label{fig:i_v_relationship_jeong}
 % \end{figure}
 

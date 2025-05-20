@@ -42,7 +42,7 @@ during the electrophysiological experiments reported in \parencite{jeongCaa1TFly
 $V$ is membrane potential in Volts, F is Faraday's constant ($\approx 9.6485 \times 10^{4} C\cdot \text{mol}^{-1}$),
 $R$ is the universal gas constant
 ($\approx 8.3145 J/K^\circ \cdot \text{Mol}$), $T$ is temperature is Kelvin (here, $273.16+25=298.16^{\circ}$).
-$[Ca^{2+}]_{\text{inside}}$ and $[Ca^{2+}]_{\text{outside}}$ are the concentrations of $Ca^{2+}$ inside and
+$[Ca^{2+}]_{\text{inside}}$ and $[Ca^{2+}]_{\text{outside}}$ are the concentrations of Ca$^{2+}$ inside and
 outside the membrane. The values were set to $23 \times e^{-9}$ and $0.5 \times e^{-3}$ correspondingly,
 from the motor neurons in Drosophila
 \parencite{frankenhaeuserActionCalciumElectrical1957}.
@@ -54,7 +54,7 @@ wangModelTtypeCalcium1991}:
     I_T(V) = g_T m_T(V)^3 h_T(V) (V - V_{Ca})
 \end{equation}
 $g_T$ is the maximum value of the conductance of the T-Type
-Ca$^{2+}$ current, and $V_{Ca}$ us the reversal potential for $Ca^{2+}$, which can be estimated
+Ca$^{2+}$ current, and $V_{Ca}$ us the reversal potential for Ca$^{2+}$, which can be estimated
 given the ion concentrations inside and outside the membrane (see Section \ref{subsbusec_reversal_potential}).
 However, the model with the Ohmic current did not reprocude the I-V relations
 in \parencite{jeongCaa1TFlyTtype2015} correctly (\textcolor{red}{see Sction ...}).
@@ -69,12 +69,12 @@ Reversal potential was estimated by Nernst equation \parencite{izhikevichDynamic
     V_{\text{ion}} = \frac{RT}{zF}\ln{\frac{[\text{Ion}]_{\text{outside}}}{[\text{Ion}]_{\text{inside}}}}
 \end{equation*}
 where $[\text{Ion}]_{\text{inside}}$, and $[\text{Ion}]_{\text{outside}}$ are concentrations of the ions
-(here, $Ca^{2+}$) inside and outside of the cell. The values for $[Ca^{2+}]_{inside}$ and 
+(here, Ca$^{2+}$) inside and outside of the cell. The values for $[Ca^{2+}]_{inside}$ and 
 $[Ca^{2+}]_{outside}$ were taken to be $23 nM$, and $0.5 mM$ correspondingly
 from the motor neurons in Drosophila \parencite{macleodFastCalciumSignals2002}.
 $R$ is the universal gas constant
 ($\approx 8.3145 J/K^\circ \cdot \text{Mol}$), $T$ is temperature is Kelvin (here, $273.16+25=298.16^{\circ}$), $F$ is Faraday's constant
-($\approx 9.6485 \times 10^{4} C\cdot \text{mol}^{-1}$), $z$ is the valence of the ion ($z=2$ for $Ca^{2+}$).
+($\approx 9.6485 \times 10^{4} C\cdot \text{mol}^{-1}$), $z$ is the valence of the ion ($z=2$ for Ca$^{2+}$).
 
 \begin{equation*}
     V_{Ca} \approx 128 mV
@@ -82,7 +82,7 @@ $R$ is the universal gas constant
 
 
 \subsubsection{Activation Gate}
-Dynamics of the activation variable $m_T$ of T-Type $Ca^{2+}$ channel is given by \parencite{wangModelTtypeCalcium1991}:
+Dynamics of the activation variable $m_T$ of T-Type Ca$^{2+}$ channel is given by \parencite{wangModelTtypeCalcium1991}:
 
 \begin{equation*}
     \frac{dm_T(V)}{dt} = \frac{m_{T,\infty}(V) - m_T(V)}{\tau_{m_T}(V)}
@@ -321,7 +321,7 @@ asymtote at $V\approx216$mV (Figure \ref{fig:data_fitted_taus_from_jeong_inactiv
 \FloatBarrier
 
 
-\subsection{Simulations of T-Type \texorpdfstring{$Ca^{2+}$}{Ca+2} Current}\label{subsec_r5_simulations_t_type_current}
+\subsection{Simulations of T-Type \texorpdfstring{Ca$^{2+}$}{Ca+2} Current}\label{subsec_r5_simulations_t_type_current}
 
 Simulations were done using python package '\textit{scipy.integrate.solve\_ivp}' with
 zero initial conditions. Different integration methods were compared: RK45, BDF, and LSODA.
@@ -362,7 +362,7 @@ RK45. For the simulatins presented in this section, RK45 method was used.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.45\textwidth]{./img/t_type_calcium_channel/iv_relationship_jeong_2015.png}
-    \caption{I-V relationship of T-Type $Ca^{2+}$ current in Drosophila. Adapted from \parencite{jeongCaa1TFlyTtype2015}.}
+    \caption{I-V relationship of T-Type Ca$^{2+}$ current in Drosophila. Adapted from \parencite{jeongCaa1TFlyTtype2015}.}
     \label{fig:i_v_relationship_jeong}
 \end{figure}
 
@@ -398,7 +398,7 @@ RK45. For the simulatins presented in this section, RK45 method was used.
         \label{fig_t_type_constant_field_iv_relationship}
     \end{subfigure}
     
-    \caption{Ohm's low vs constant-field equation for T-Type $Ca^{2+}$ current.}
+    \caption{Ohm's low vs constant-field equation for T-Type Ca$^{2+}$ current.}
     \label{fig_t_type_voltage_step_ohmic_vs_constant_field}
 \end{figure}
 
@@ -507,7 +507,7 @@ RK45. For the simulatins presented in this section, RK45 method was used.
     \centering
     \includegraphics[width=0.5\textwidth, page=1]{./img/t_type_calcium_channel/activation_fit_by_double_exponentials.png}
     \caption{
-        Fitting time constant of activation function for T-Type $Ca^{2+}$ channel by double exponential function
+        Fitting time constant of activation function for T-Type Ca$^{2+}$ channel by double exponential function
         (Eq. \ref{eq:fitting_t_type_activation_delay_with_double_exponential}). The fitting was done using the Python
         library \textit{scipy.optimize.curve\_fit} with the following initial guesses for the parameters:
         $a_{\tau_{m_T}}=2$, $b_{\tau_{m_T}}=1$, $V_{\tau_{m_T}^1}=-100$, $k_{\tau_{m_T}^1}=10$,
