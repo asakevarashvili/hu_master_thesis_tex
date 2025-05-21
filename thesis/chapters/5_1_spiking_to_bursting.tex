@@ -15,9 +15,9 @@ The kinetic properties of these channels in \textit{Drosophila} are not extensiv
 Therefore, calcium-dependent inactivation of \gls{eag} channels is unlikely to play a significant role in the transition from bursting to spiking in R5 neurons.
 
 In the literature, bursting models generally lack \gls{eag} channels. Thus, I added the channel to the Wang model to test the above-mentioned hypothesis. The parameters for \gls{eag} channel were adapted from \parencite{bronkRegulationEagCa22018}, with few modifications that will be discussed below. The current through the channel \textcolor{red}{was added to the total ionic current} $\sum I_{\text{ion}}$ \textcolor{red}{in Equation ??? and is governed by}:
-\begin{equation*}\label{eq:current_eag}
+\begin{equation}\label{eq:current_eag}
     I_{\text{EAG}} = g_{\text{EAG}} m^2 (V - V_K)
-\end{equation*}
+\end{equation}
 where $g_{\text{EAG}}$ is the conductance, $V_K$ is reversal potential of potassium, and $m$ is activation variable governed by Equation \ref{eq:differential_gating_steadyst_timeconst}. The voltage is measured in millivolts, while the maximal conductance and current are expressed in either $mS/cm^2$, or $S/cm^2$ and $\mu A/cm^2$ or $mA/cm^2$, respectively, depending on the model (Appendix \ref{appendix:functions_and_parameters}). The steady state activation $m_{\infty}(V)$, and activation time constant $\tau(V)$ are governed by:
 \begin{equation}\label{eq:eag_steady_state_activation}
     m_\infty(V) = \left( \frac{1}{1 + \exp{(-(V+23.12-d)/k)}} \right)

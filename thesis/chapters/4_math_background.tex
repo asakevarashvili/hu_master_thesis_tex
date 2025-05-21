@@ -31,8 +31,7 @@ is a stable equilibrium is referred to as \textbf{\textit{'point-cycle burster'}
 \parencite{izhikevichNEURALEXCITABILITYSPIKING2000}, and will be the main focus in the following.
 
 Bursting is commonly modeled as a dynamical system consisting of two - \textbf{fast and slow subsystems}, with the fast system having two states - spiking and resting, while the slow system slowly modulates the transition of the fast subsystem between the two states. 
-In other words, modulation of the slow variable causes transitions between the states in the fast subsystem. Mathematically, such transitions can be analyzed using bifurcation theory.
-%!TODO!: citation
+In other words, modulation of the slow variable causes transitions between the states in the fast subsystem. Mathematically, such transitions can be analyzed using bifurcation theory \cite{izhikevichDynamicalSystemsNeuroscience2006,izhikevichNEURALEXCITABILITYSPIKING2000,golombContributionPersistentNa2006}.
 
 \begin{figure}[!t]
     \centering
@@ -68,20 +67,15 @@ where $v$ is the membrane potential, and $u$ represents a recovery variable acti
     \right.
     \quad \text{if } v \geq v_{\text{thr}}
 \end{equation*}
-By changing the dimensionless parameters $a$, $b$, $c$, and $d$ the model can reproduce a variety of spiking behaviours. However, such phenomenological models are not biologically plausible, as they do not account for the intrinsic mechanisms of activity generation.
+By changing the dimensionless parameters $a$, $b$, $c$, and $d$ the model can reproduce a variety of spiking behaviours. However, such phenomenological models are not detailed enough to investigate effects of ion channels, as they do not account for the intrinsic mechanisms of activity generation.
 
 On the other hand, conductance-based models describe the interactions between membrane potential and ionic currents, thereby providing insights into the underlying biological mechanisms responsible for observed neuronal activity patterns. Since the aim of this thesis is to understand which biological mechanisms may contribute to the generation of diverse activity patterns observed in R5 neurons, conductance-based models will be the primary focus of the following work.
 
 Furthermore, neurons can be modelled using \textbf{single-} or \textbf{multicompartment} approaches.
-%!TODO!: Citation
-In general, the distribution and/or concentration of the ion channels varies across different parts of the neuron, such as soma, dendrites, and axon, with some ion channels expressed in particular regions. 
-%!TODO!: Citation
-In addition, neuronal morphology has been shown to enhance robustness to parameter variations and significantly influence neuronal computations, including synaptic integration, as well as initiation and propagation of action potential.
-%!TODO!: Citations after each part
-Multicompartment models account for these spatial variations by modeling different neuronal compartments and interactions between them. In contrast, single-compartment models assume a uniform distribution of ion channels and represent neurons as a single, uniform unit. Nevertheless, single-compartment models have been found to be sufficient for replicating many experimental observations.
-%!TODO!: Citation
-Although multicompartment models are more biologically plausible and can better reproduce experimental data, single-compartment models are more computationally efficient (see also discussion).
-%!TODO!: Citation
+In general, the distribution and/or concentration of the ion channels varies across different parts of the neuron, such as soma, dendrites, and axon, with some ion channels expressed in particular regions \cite{destexheDendriticLowthresholdCalcium1998,gunayDistalSpikeInitiation2015}.
+In addition, neuronal morphology has been shown to enhance robustness to parameter variations and significantly influence neuronal computations, including synaptic integration, as well as initiation and propagation of action potential \cite{destexheDendriticLowthresholdCalcium1998,gunayDistalSpikeInitiation2015,cuntzOneRuleGrow2010}.
+Multicompartment models account for these spatial variations by modeling different neuronal compartments and interactions between them. In contrast, single-compartment models assume a uniform distribution of ion channels and represent neurons as a single, uniform unit. Nevertheless, single-compartment models have been found to be sufficient for replicating many experimental observations \cite{wangMultipleDynamicalModes1994,golombContributionPersistentNa2006,destexheDendriticLowthresholdCalcium1998,liuMultipleConductancesCooperatively2008,vickstromTTypeCalciumChannels2020}.
+Although multicompartment models are more biologically plausible and can better reproduce experimental data, single-compartment models are more computationally efficient (see also discussion) \cite{destexheDendriticLowthresholdCalcium1998}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%
@@ -209,8 +203,8 @@ and the bifurcation happens when the slow variable passes through the critical v
 \begin{figure}[!t]
     \centering
     \includegraphics[width=0.95\linewidth]{../img/2_mathematical_overview/bifurcation_examples.png}
-    \caption[Examples of \gls{subhb}, \gls{sn}, \gls{sh}, and \gls{snic} bifurcations]{
-        \textbf{Examples of \gls{subhb}, \gls{sn}, \gls{sh}, and \gls{snic} bifurcations.}
+    \caption[Examples of subHB, SN, SH, and SNIC bifurcations]{
+        \textbf{Examples of subHB, SN, SH, and SNIC bifurcations.}
         (A) and (B) adapted from \parencite{franciRobustTunableBursting2018}; (C) adapted with modifications from \parencite{luceroTheoreticalStudyHysteresis1999}.
     }
     \label{fig:example_bifurcations_subhb_sn_sh_snic}

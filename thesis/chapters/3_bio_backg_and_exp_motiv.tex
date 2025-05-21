@@ -18,14 +18,14 @@ To construct a conductance-based model that replicates electrophysiological find
 Which processes might modulate neuronal activity to explain the experimental findings, and what mechanisms might underlie these effects?
 
 This section provides an overview of the literature on sleep in \textit{Drosophila}, with a focus on R5 neurons. These neurons are thought to encode sleep drive and induce \gls{swa} during increased sleep pressure in the \textit{Drosophila}
-\gls{cns}. In this section, the sleep is viewed from the point of R5 neurons: Which circuits and processes modulate the activity of R5 neurons, and what are the potential underlying mechanisms at the circuit level? What is the function of R5 neurons, and how can their activity modulate other populations, as well as the behaviour of the animal? Which cellular processes might be involved in the regulation of R5 activity, together with external input from circuits that modulate R5 activity? Finally, several relevant experimental findings are discussed, along with proposed mechanisms underlying these findings.
+\gls{cns}. In this section, sleep is viewed from the point of R5 neurons: Which circuits and processes modulate the activity of R5 neurons, and what are the potential underlying mechanisms at the circuit level? What is the function of R5 neurons, and how can their activity modulate other neuronal populations, as well as the behaviour of the animal? Which cellular processes might be involved in the regulation of R5 activity, together with external input from circuits that modulate R5 activity? Finally, several relevant experimental findings are discussed, along with proposed mechanisms underlying these findings.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Ion Channels} \label{subsec:ion_channels}
 \subsubsection{General Properties and Function}\label{subsubsec:ion_channel_properties_and_function}
 
-\textbf{Ion channels} are proteins found on the membrane of a neuron, which allow flow of ions (such as $Na^+$, Ca$^{2+}$, $K$, or $Cl^-$) across the membrane and contribute to modulation of membrane potential, neuronal excitability, and synaptic transmission. For a given ion channel, the rate of the ion flow across that channel at the given moment could depend on different factors, such as membrane potential, intracellular ion concentration, or temperature. Thus, in contrast to, e.g. \gls{iaf} model, \textbf{conductance-based models} incorporate activity-dependent conductances and provide a biologically plausible approach that more accurately captures the shape of neuronal responses \parencite{destexheConductanceBasedIntegrateandFireModels1997}. In 1952, Hodgkin and Huxley published the first conductance-based model describing initiation of an action potential of a squid giant axon based on gating mechanisms of $Na^{+}$, $K^+$ and leak currents \parencite{hodgkinQuantitativeDescriptionMembrane1952}, for which they were awarded the Nobel Prize in 1963. The mechanism of bursting and transition between different activity states in R5 neurons is more complex and would require the incorporation of different ion channels in the model.
+\textbf{Ion channels} are proteins found on the membrane of a neuron, which allow flow of ions (such as $Na^+$, Ca$^{2+}$, $K$, or $Cl^-$) across the membrane and contribute to modulation of membrane potential, neuronal excitability, and synaptic transmission. For a given ion channel, the rate of the ion flow across that channel at the given moment can depend on different factors, such as membrane potential, intracellular ion concentration, or temperature. Thus, in contrast to, e.g. \gls{iaf} model, \textbf{conductance-based models} incorporate activity-dependent conductances and provide a biologically plausible approach that more accurately captures the shape of neuronal responses \parencite{destexheConductanceBasedIntegrateandFireModels1997}. In 1952, Hodgkin and Huxley published the first conductance-based model describing initiation of an action potential of a squid giant axon based on gating mechanisms of $Na^{+}$, $K^+$ and leak currents \parencite{hodgkinQuantitativeDescriptionMembrane1952}, for which they were awarded the Nobel Prize in 1963. The mechanism of bursting and transition between different activity states in R5 neurons is more complex and would require the incorporation of different ion channels in the model.
 
 \begin{table}[!b]
     \centering
@@ -57,7 +57,7 @@ where, $R$ is the universal gas constant ($8315$ mJ/(K$^\circ$$\cdot$Mol)), $T$ 
 
 Not all channels are selective to single ion species. Some channels (e.g. ones mediating hyperpolarization-activated current $I_h$) are permeable to multiple ions. Additionally, in models, ionic current may represent the combined effect of several ion channel types (such as $K^+$ and $Na^+$ leak channels). In such cases, a single reversal potential is often used (see e.g. \parencite{wangMultipleDynamicalModes1994}).
 
-Apart from the reversal potential, the magnitude of current through an ion channel depends on the gating mechanism of the channel. Ion channels may have \textbf{activation} and/or \textbf{inactivation gates} (Figure \ref{fig:voltage_gated_channel_structure}). Activation gates can be thought of as doors which, if open, let ions pass through the channel. Inactivation gates are the mechanism to block the channel and act independently from the activation gates. In general, an ion channel contains one inactivation gate and one or more activation gates. For ions to pass through the channel, all gates must be in the open state simultaneously. Each gate is characterized by the probability of the gate to be in the open state, which can depend on membrane potential, concentration of ligands (i.e. ions or molecules that bind to the channel and influence its gating properties), temperature, or combinations of these factors. One common example of a ligand-gated ion channel is a family of Ca$^{2+}$ gated $K^+$ channels, in which calcium influx can either open or close the channel depending on the specific channel subtype.
+Apart from the reversal potential, the magnitude of current through an ion channel depends on the gating mechanism of the channel. Ion channels may have \textbf{activation} and/or \textbf{inactivation gates} (Figure \ref{fig:voltage_gated_channel_structure}). Activation gates can be thought of as doors which, if open, let ions pass through the channel. Inactivation gates are the mechanisms to block the channel and act independently from the activation gates. In general, an ion channel contains at most one inactivation gate and one or more activation gates. For ions to pass through the channel, all gates must be in the open state simultaneously. Each gate is characterized by the probability of the gate to be in the open state, which can depend on membrane potential, concentration of ligands (i.e. ions or molecules that bind to the channel and influence its gating properties), temperature, or combinations of these factors. One common example of a ligand-gated ion channel is a family of Ca$^{2+}$ gated $K^+$ channels, in which calcium influx can either open or close the channel depending on the specific channel subtype.
 
 Ion channels whose gating mechanism solely depends on membrane potential are referred to as \textbf{voltage-gated ion channels}. Similarly, if Channel gating depends on the presence of ligands, they are classified as \textbf{ligand-gated ion channels}. Depending on the membrane potentials at which voltage-gated ion channels are in an open state, they can modulate subthreshold membrane potential, spike shape, or both. Furthermore, the gating mechanism of some ion channels depends on both voltage and the presence of a ligand. In such cases, the channel opens only when both conditions are met.
 
@@ -72,11 +72,10 @@ Ion channels whose gating mechanism solely depends on membrane potential are ref
     \label{fig:voltage_gated_channel_structure}
 \end{figure}
 
-In neuronal models, ion channels are not modelled explicitly. Rather, the models describe the behaviour of a population of ion channels. Thus, the flow of the current through a given channel depends on the maximum conductance (i.e. conductance when all channels are open) and the probability that the gates are in an open state.%!TODO!: Add link to formula !!!!
+In neuronal models, usually ion channels are not modelled explicitly. Rather, the models describe the behaviour of a population of ion channels. Thus, the flow of the current through a given channel depends on the maximum conductance (i.e. conductance when all channels are open) and the probability that the gates are in an open state.%!TODO!: Add link to formula !!!!
 
 Importantly, in response to changes in membrane voltage or ligand concentration, not all channels open or close simultaneously. Instead, transitions between open and closed states occur with a certain probability. At the population level, the probabilistic behaviour is characterized by associated \textbf{gating time constants}. These time constants can vary depending on the channel type, ranging from several milliseconds (fast) to several seconds (slow). The mathematical description of ion channels, their gating mechanisms and how gating constants are related
-to the transition probabilities between open and closed states is provided in Section 2.
-%!TODO!: Add section !!!!
+to the transition probabilities between open and closed states is provided in Section \ref{sec:math_background}.
 
 
 % models
@@ -94,15 +93,14 @@ to the transition probabilities between open and closed states is provided in Se
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Known ion channels in \textit{Drosophila} R5 neurons} \label{subsubsect:known_channels_in_r5}
-There is a limited amount of literature about which ion channels are present in R5 neurons. To my knowledge, the only experimentally confirmed ion channel in these neurons is the \textbf{T-type} \( \mathbf{Ca^{2+}} \) ion channel, \textcolor{orange}{localised at presynaptic terminals (unpublished study by David Owald and colleagues)}. In many bursting models, T-type channels have been found to be important for bursting due to their kinetic properties.
-%!TODO!: (see Section \textcolor{red}{???}).
+There is a limited amount of literature about what types of ion channels are present in R5 neurons. To my knowledge, the only experimentally confirmed ion channel in these neurons is the \textbf{T-type} \( \mathbf{Ca^{2+}} \) ion channel, \textcolor{orange}{localised at presynaptic terminals (unpublished study by David Owald and colleagues)}. In many bursting models (biological as well as computational), T-type channels have been found to be important for bursting (see Section \ref{subsubsec:ion_channel_contributions}).
 
-The second ion channel that potentially is present in R5 neuron is potassium \textbf{\gls{eag}} channel, which could potentially regulate neuronal excitability \parencite{bruggemannEtheragogoEncodesVoltagegated1993}. A recent study reported diurnal variation in the gene expression encoding the potassium \gls{eag} channel in R5 neurons of \textit{Drosophila} \parencite{doppSinglecellTranscriptomicsReveals2024}. Although direct evidence for the presence of \gls{eag} channels in R5 neurons has not been reported, rhythmic modulation of gene expression suggests that \gls{eag} may indeed be present in R5 and take part in diurnal modulation of its activity.
+The second ion channel that potentially is present in R5 neuron is potassium \textbf{\gls{eag}} channel, which could potentially regulate neuronal excitability \parencite{bruggemannEtheragogoEncodesVoltagegated1993}. A recent study reported diurnal variation in the gene expression encoding the potassium \gls{eag} channel in R5 neurons of \textit{Drosophila} \parencite{doppSinglecellTranscriptomicsReveals2024}. Although direct evidence for the presence of \gls{eag} channels in R5 neurons has not been reported, rhythmic modulation of the gene expression in R5 neurons, suggests that \gls{eag} may indeed be present in R5 and take part in diurnal modulation of its activity.
 As potassium channels are thought to decrease neuronal excitability \parencite{bruggemannEtheragogoEncodesVoltagegated1993}, and \gls{eag} was shown to be negatively correlated with R5 activity \parencite{doppSinglecellTranscriptomicsReveals2024}, diurnal variation of \gls{eag} expression might be an important mechanism to switch R5 activity from tonic during the daytime to bursting at night.
 
 Additionally, \textbf{voltage-gated sodium channels (DMNa\textsubscript{V})} have been detected in \textit{Drosophila} active neurons, suggesting that they are also expressed in R5 neurons.
 
-Interestingly, both the T-type calcium and DMNa\textsubscript{V} channels are encoded by single genes \parencite{jeongCaa1TFlyTtype2015,ravenscroftDrosophilaVoltageGatedSodium2020}. \textit{para} gene encoding DMNa\textsubscript{V} has been shown to be responsible for mediating both transient and persistent components of sodium channels, likely via a process called alternative splicing \parencite{linAlternativeSplicingVoltageGated2009}. To my knowledge, it has never been reported whether alternative splicing applies to the genes encoding T-type and \gls{eag} channels in \textit{Drosophila}.
+Interestingly, both the T-type calcium and DMNa\textsubscript{V} channels are encoded by single genes \parencite{jeongCaa1TFlyTtype2015,ravenscroftDrosophilaVoltageGatedSodium2020}. \textit{para} gene, which encodes DMNa\textsubscript{V}, has been shown to be responsible for mediating both transient and persistent components of sodium channels, likely via a process called alternative splicing \parencite{linAlternativeSplicingVoltageGated2009}. To my knowledge, it has never been reported whether alternative splicing applies to the genes encoding T-type and \gls{eag} channels in \textit{Drosophila}.
 
 
 
@@ -139,7 +137,6 @@ Furthermore, networks within the central complex act as a sensory gate promoting
         \textbf{Circuits involved in \textit{Drosophila} sleep.}
         Left: anatomical organisation of neurons involved in sleep regulation. Right: schematic diagram of sleep-regulating network in \textit{Drosophila} brain.
         Adapted from \parencite{suarez-grimaltNeuralArchitectureSleep2021}
-        %!TODO!: Replicate image on the right and add connections from R5 to E-PG. Add text to caption
     }
     \label{fig:droso_sleep_circuit}
 \end{figure}
@@ -252,11 +249,10 @@ Although the cellular mechanisms of spiking and bursting have not been investiga
 
 T-Type and \gls{hcn} channels have been found to be important components for many bursting neurons in various animal species \parencite{amarilloInterplaySevenSubthreshold2014,vickstromTTypeCalciumChannels2020,destexheModelInwardCurrent1993},
 and taking part in subthreshold dynamics and slow oscillations \parencite{wangMultipleDynamicalModes1994}.
-For some neurons, they have been hypothesized and experimentally validated to play a substantial role in mediating bursting and low-threshold Ca$^{2+}$ spikes after sodium channels are blocked in the experimental conditions. %!TODO!: citations
+For some neurons, they have been hypothesized and experimentally validated to play a substantial role in mediating bursting and low-threshold Ca$^{2+}$ spikes after sodium channels are blocked in the experimental conditions \cite{mccormickModelElectrophysiologicalProperties1992,liuMultipleConductancesCooperatively2008,vickstromTTypeCalciumChannels2020,suzukiTtypeCalciumChannels1989}.
 T-type channels are voltage-gated calcium channels that activate fast at hyperpolarized membrane potentials, inactivate slowly at potentials larger than the firing threshold, and deinactivate at hyperpolarized membrane potentials. \gls{hcn} channels generally have only an activation gate that opens with hyperpolarization. They mediate depolarizing current \parencite{destexheModelInwardCurrent1993}, and facilitate setting the minimal membrane potential (e.g. during oscillations) at more depolarized potentials \parencite{liuMultipleConductancesCooperatively2008}.
 
-% TODO: Maybe add another literature in "see e.g. described previously"
-The mechanism of bursting that is mediated by T-type- and h-currents has been described previously (see e.g. \parencite{liuMultipleConductancesCooperatively2008}). In these models, hyperpolarizing current activates \gls{hcn} channels that, once opened, depolarize the membrane until the activation threshold of T-type channels. When T-type channels open, they provide an excitatory current driving the neuron into a spiking state.
+The mechanism of bursting that is mediated by T-type- and h-currents has been described previously (see e.g. \parencite{liuMultipleConductancesCooperatively2008,wangMultipleDynamicalModes1994}). In these models, hyperpolarizing current activates \gls{hcn} channels that, once opened, depolarize the membrane until the activation threshold of T-type channels. When T-type channels open, they provide an excitatory current driving the neuron into a spiking state.
 At higher potentials, T-type currents slowly inactivate, and once inactivation is sufficiently large, the hyperpolarizing currents take over to drive the membrane potential back to a hyperpolarized state.
 At these potentials, T-type channels deinactivate and \gls{hcn} channels activate, and the cycle repeats. Such bursting, when a neuron bursts due to hyperpolarizing current, is referred to as \textbf{inhibition-induced bursting} \parencite{izhikevichDynamicalSystemsNeuroscience2006}.
 
@@ -265,7 +261,7 @@ Furthermore, it has also been associated with \gls{ahp} (undershoot of membrane 
 However, is worth noting that \gls{hcn} channels are not necessary for inhibition-induced bursting,
 or for \gls{ahp}. For example, within the scope of this thesis, simulations of the bursting model described in \parencite{wangMultipleDynamicalModes1994}
 demonstrated that persistent sodium leak, potassium and T-type channels are necessary and sufficient to generate bursting behaviour within the investigated parameter regime.
-Furthermore, the undershoot depends on the dynamical properties of the system, as it will be discussed in more detail in Section 2. %!TODO!: Add link
+Furthermore, the undershoot depends on the dynamical properties of the system, as it will be discussed in more detail in Section \ref{sec:math_background}.
 
 \noindent\textbf{L-Type channels}
 
@@ -290,7 +286,6 @@ duration \parencite{liuMultipleConductancesCooperatively2008}.
 \noindent\textbf{Leak Channels}
 
 Leak channels predominantly modulate resting membrane potential \parencite{mccormickModelElectrophysiologicalProperties1992,amarilloInterplaySevenSubthreshold2014}. The parameters for these channels (maximal conductance and reversal potential) are often tuned to reproduce experimentally observed resting membrane potential and input resistance \parencite{wangMultipleDynamicalModes1994}.
-% TODO: Is WANG correct citation????
 
 \noindent \textbf{Ca\textsuperscript{2+} Concentration}
 
@@ -405,8 +400,8 @@ Thus, slow ion dynamics may also effectively regulate the timescale of oscillati
 \begin{figure}[!b]
     \centering
     \includegraphics[width=0.93\linewidth]{sleep_and_r5_network/raccuglia_compound_delta.png}
-    \caption[Diurnal variation of R5 compound \gls{swa} power spectrum]{
-        \textbf{Diurnal variation of R5 compound \gls{swa} power spectrum}.
+    \caption[Diurnal variation of R5 compound SWA power spectrum]{
+        \textbf{Diurnal variation of R5 compound SWA power spectrum}.
         Left: \gls{psd} of voltage recordings representing compound R5 activity at different \gls{zt} times, averaged over trials. The delta frequency range ($0.5$-$1.5$Hz) is outlined by the dashed circle. Right: variation of the average delta power throughout the day. The delta power increases throughout the course of the day, reaching its peak at night, during consolidated sleep. The average \gls{psd} is even higher in sleep-deprived flies.
         Adapted from \parencite{raccugliaNetworkSpecificSynchronizationElectrical2019}
     }
@@ -426,8 +421,8 @@ Thus, slow ion dynamics may also effectively regulate the timescale of oscillati
 R5 neurons synchronize and exhibit bursting activity with increasing sleep need \parencite{raccugliaNetworkSpecificSynchronizationElectrical2019,liuSleepDriveEncoded2016}
 (Figures \ref{fig:raccuglia_compound_delta_oscillations}-\ref{fig:tmp_single_unit_r5_day_night}).
 Study of Raccuglia and colleagues showed that delta power ($0.5$-$1.5$Hz) of the compound R5 oscillations increases progressively throughout the day, peaks during the night when the fly displays consolidated sleep, and subsequently declines toward the morning \parencite{raccugliaNetworkSpecificSynchronizationElectrical2019} (Figure \ref{fig:raccuglia_compound_delta_oscillations} right).
-The delta power of the compound \gls{swa} was observed to be even stronger for sleep-deprived flies (Figure \ref{fig:raccuglia_compound_delta_oscillations} left). Furthermore, Liu and colleagues reported an increase in firing rate of R5 neurons at early night, in comparison to early morning \parencite{liuSleepDriveEncoded2016}, and being highest for sleep-deprived flies (Figure \ref{fig:tmp_frequency_vs_zt}). Of note, interestingly, they observed bursting in R5 neurons only in sleep-deprived flies; however, this difference could be due to methodological differences. 
-% !TODO!: (\textcolor{red}{see also Section ??? - Discussion}).
+The delta power of the compound \gls{swa} was observed to be even stronger for sleep-deprived flies (Figure \ref{fig:raccuglia_compound_delta_oscillations} left). Furthermore, Liu and colleagues reported an increase in firing rate of R5 neurons at early night, in comparison to early morning \parencite{liuSleepDriveEncoded2016}, and being highest for sleep-deprived flies (Figure \ref{fig:tmp_frequency_vs_zt}).
+% Of note, interestingly, they observed bursting in R5 neurons only in sleep-deprived flies; however, this difference could be due to methodological differences.
 
 The compound $\sim 1$ Hz \gls{swa} in R5 originates from the synchronization between individual R5 units, which display a similar peak in the power spectrum as observed in compound oscillations \parencite{raccugliaNetworkSpecificSynchronizationElectrical2019} (Figure \ref{fig:tmp_single_unit_r5_day_night}).
 In contrast, during daytime, the peak in the delta power is observed neither in the compound \gls{swa} (Figure \ref{fig:raccuglia_compound_delta_oscillations} left) nor in the single-cell activity (Figure \ref{fig:tmp_single_unit_r5_day_night} left).
@@ -436,9 +431,9 @@ Furthermore, during the day, the R5 neurons exhibit tonic firing rate (Figure \r
 \begin{figure}[!t]
     \centering
     \includegraphics[width=0.65\linewidth]{tmp/raccuglia_2019_single_unit_sync.png}
-    \caption[Contribution of individual R5 neurons in compound \gls{swa}]{
-        \textbf{Contribution of individual R5 neurons in compound \gls{swa}}
-        Left: Average power spectrum of R5 single-cell \gls{swa}.
+    \caption[Contribution of individual R5 neurons in compound SWA]{
+        \textbf{Contribution of individual R5 neurons in compound SWA}
+        Left: Average power spectrum of R5 single-cell SWA.
         Right: Pair-wise time lag distribution of depolarization phases between individual R5 neurons recorded at \gls{zt} 9-12.
         Adapted from \parencite{raccugliaNetworkSpecificSynchronizationElectrical2019}
     }
