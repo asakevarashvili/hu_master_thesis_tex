@@ -97,19 +97,19 @@ Interestingly, although the minimal resting membrane potential was more strongly
 
 The Goldman 1 and Goldman 2 models differ only by the maximal conductances of the ion channels (see Appendix \ref{appendix:functions_and_parameters}, and Figure \ref{fig:model_conductances}). Apart from differences in other conductances, the maximal conductance of the calcium activated potassium channel is lower in Goldman 1 in comparison to Goldman 2 models (Goldman 1: $g_{CaT}=7$ mS/cm$^2$, $g_{KCa}=25$ mS/cm$^2$; Goldman 2: $g_{CaT}=10$ mS/cm$^2$, $g_{KCa}=40$ mS/cm$^2$). Even a small influx of calcium could potentially result in domination of the KCa-mediated currents if the maximal conductance of the KCa channels is large enough.
 
-\color{red}
+% \color{red}
 
-To test this - vary g\_CaT + g\_KCa and: (Todo) 1. (!IMPORTANT!) Plot similar figures as in Figure \ref{fig:rmp_models_phase}, but with colour showing total calcium influx during burst, total t-type current during burst, total t-type current during burst, total calcium current during burst, total KCa current after burst before plateau.
-BUT: x axis - CaT channel and y axis KCa to see how the calcium AND KCa conductance affects resting membrane potential
+% To test this - vary g\_CaT + g\_KCa and: (Todo) 1. (!IMPORTANT!) Plot similar figures as in Figure \ref{fig:rmp_models_phase}, but with colour showing total calcium influx during burst, total t-type current during burst, total t-type current during burst, total calcium current during burst, total KCa current after burst before plateau.
+% BUT: x axis - CaT channel and y axis KCa to see how the calcium AND KCa conductance affects resting membrane potential
 
-\color{black}
+% \color{black}
 
 
 \subsubsection{Non-monotonic trends and abrupt shifts in activity}
 
 Figure \ref{fig:rmp_models_phase_i_slices} shows the values of the minimal resting membrane potentials from Figure \ref{fig:rmp_models_phase}, plotted against $g_{CaT}$ for fixed values of the external current. The figure illustrates that in certain regions of the I$_{\text{ext}}$-$g_{CaT}$ parameter space, decreasing the maximal conductance of the T-type channels leads to a decrease in the minimal membrane potetial contrary to the behaviour observed for larger values of $g_{CaT}$ (see the curve right to the shaded area in Figure \ref{fig:rmp_models_phase_i_slices}).
 
-To better understand this behaviour, representative voltage traces were examined around the critical point where the minimal resting membrane potential begins to decrease as $g_{CaT}$ is reduced (Figure \ref{fig:rmp_models_phase_i_slices_voltage}) \textcolor{red}{(Describe plot, where?)}. The figure shows that this drop in minimal potential likely corresponds to the presence of spike undershoots that fall below the membrane potential at rest (i.e. potential where the model neurons do not exhibit spikes).
+To better understand this behaviour, representative voltage traces were examined around the critical point where the minimal resting membrane potential begins to decrease as $g_{CaT}$ is reduced. The representative voltage traces are illustrated in Figure \ref{fig:rmp_models_phase_i_slices_voltage}, corresponding to the black dashed lines in the Figure \ref{fig:rmp_models_phase_i_slices}. The figure shows that this drop in minimal potential likely corresponds to the presence of spike undershoots that fall below the membrane potential at rest (i.e. potential where the model neurons do not exhibit spikes).
 
 % Since in R5 neurons the observed membrane potential during bursts is strictly greater than during the interburst interval (Figure \ref{fig:sleep_r5_knock_ttx_voltage}), could the above-described result indicate a partial blockade of the T-type channels? \textcolor{red}{(What should one concentrate on?)}
 % Not necessarily. As illustrated in Sections \ref{sec:sleep_and_r5_network} and \ref{sec:math_background}, even within the low-dimensional fast-slow system framework, bursting can arise through various mechanisms, depending on the nature of burst onset and offset. Moreover, variation in the maximal conductances of single channels has been shown to produce qualitatively different effects, even within the same model, when operating in different parameter regimes - despite exhibiting similar voltage traces under default parameters (i.e. before the variation in single conductances) \parencite{alonsoVisualizationCurrentsNeural2019}. Thus, this effect \textcolor{red}{(which effect?)} is likely model-specific rather than general. Since this region \textcolor{red}{(what region?)} does not appear to be relevant in understanding the electrophysiological properties of the R5 neurons, it was not analyzed further.
@@ -140,7 +140,7 @@ Figure \ref{fig:nonlinearity_rmp} shows the same plot as \ref{fig:rmp_models_pha
 
 
 
-2. If have time after finishing everything else: add "non-biologically plausible" calcium current to wang: steap activation time constant as for EAG, but with longer time constant to see the effect there. The result will not change much, maybe one more sentence in the discussion.
+% 2. If have time after finishing everything else: add "non-biologically plausible" calcium current to wang: steap activation time constant as for EAG, but with longer time constant to see the effect there. The result will not change much, maybe one more sentence in the discussion.
 
 \color{black}
 

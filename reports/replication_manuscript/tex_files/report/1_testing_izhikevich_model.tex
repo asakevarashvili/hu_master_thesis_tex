@@ -12,7 +12,7 @@ The Izhikevich model \parencite{Izhikevich_2003}:
     & \frac{dv}{dt} = \left[ 0.04v^2 + 5v + 140 - u \right] \cdot 0.05 + I + I_{syn} \\
     & \frac{du}{dt} = \left[ a (bv - u) \right] \cdot 0.05
 \end{align}
-where $v$ is the membrane potential, $u$ is the recovery variable, $I$ is the external current to the neuron, $I_{syn}$ is the synaptic current driven by the spikes of the presynaptic neurons. $a$ is the time scale of the recovery variable $u$, $b$ is the sensitivity of the recovery variable to sub-threshold fluctuations of the membrane potential, $c$ is the reset value of the membrane potential after spike, $d$ is the effect of slow $K^+$ and $Na^+$ conductances on the membrane potential recovery ($u$ is increased by this amount after each spike), $v_{thr}$ is the voltage threshold for spikes.
+where $v$ is the membrane potential, $u$ is the recovery variable, $I$ is the external current to the neuron, $I_{syn}$ is the synaptic current driven by the spikes of the presynaptic neurons. $a$ is the time scale of the recovery variable $u$, $b$ is the sensitivity of the recovery variable to sub-threshold fluctuations of the membrane potential, $c$ is the reset value of the membrane potential after spike, $d$ is the effect of slow K$^+$ and Na$^+$ conductances on the membrane potential recovery ($u$ is increased by this amount after each spike), $v_{thr}$ is the voltage threshold for spikes.
 
 External input current is provided separately for each neuron and is given by:
 \begin{equation}\label{eq_external_input_current}

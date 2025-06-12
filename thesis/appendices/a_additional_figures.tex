@@ -39,11 +39,22 @@
 
 \begin{figure}[!t]
     \centering
-    \includegraphics[width=\linewidth]{../img/spiking_to_bursting/nonlinearity_eag.png}
-    \caption[Illustration of Methodological Limitation for Burst Detection]{
-        \textbf{Illustration of Methodological Limitation for Burst Detection}. Burst detection was implemented as described in the supplementary material of \cite{franciRobustTunableBursting2018}. Left: same as Figure \ref{fig:spiking_to_bursting_wang_phase_diagram}. Right: Representative voltage traces obtained from simulations using the values of I$_{\text{ext}}$ and $g_{\text{EAG}}$ indicated by the orange 'x' markers on the heatmap.
+    \includegraphics[width=0.9\linewidth]{../img/spiking_to_bursting/nonlinearity_eag.png}
+    \caption[Investigating region with opposite effect of EAG channel]{
+        \textbf{Investigating region with opposite effect of EAG channel}. Burst detection was implemented as described in the supplementary material of \parencite{franciRobustTunableBursting2018}. Left: same as Figure \ref{fig:spiking_to_bursting_wang_phase_diagram}. Right: Representative voltage traces obtained from simulations using the values of I$_{\text{ext}}$ and $g_{\text{EAG}}$ indicated by the orange 'x' markers on the heatmap. The region where increasing maximal conductance of EAG channels increase the number of spikes, correspond to the region with small-amplitude oscillations (see also Figure \ref{fig:nonlinearity_eag_small_amplitude_oscillations})
     }
     \label{fig:nonlinearity_eag}
+\end{figure}
+
+
+\begin{figure}[!t]
+    \centering
+    \includegraphics[width=0.6\linewidth]{../img/spiking_to_bursting/low_oscillations.png}
+    \caption[Small amplitude oscillations in I$_{\text{ext}}$-$g_{EAG}$ parameter plane]{
+        \textbf{Small amplitude oscillations in I$_{\text{ext}}$-$g_{EAG}$ parameter plane}
+        The region where EAG channel had an opposite effect (increasing $g_{EAG}$ causes increase in the number of spikes per burst) corresponds to the region with low-amplitude oscillations.
+    }
+    \label{fig:nonlinearity_eag_small_amplitude_oscillations}
 \end{figure}
 
 \end{document}

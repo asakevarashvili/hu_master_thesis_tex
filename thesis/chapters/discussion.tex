@@ -5,18 +5,18 @@
 
 \section{Discussion} \label{sec:discussion}
 
-\textit{Drosophila} (or, the fruit fly) is a well-established animal model for studying sleep due to its striking similarities with vertebrates in sleep regulation \parencite{shaferRegulationDrosophilaSleep2021,andreaniCircadianProgrammingEllipsoid2022}. R5 neurons have been reported to play an important role in sleep regulation in the fruit flies. Specifically, these neurons are thought to encode the homeostatic sleep drive in these animals \parencite{liuSleepDriveEncoded2016}. Similar to mammals,
+\textit{Drosophila} (or the fruit fly) is a well-established animal model for studying sleep due to its striking similarities with vertebrates in sleep regulation \parencite{shaferRegulationDrosophilaSleep2021,andreaniCircadianProgrammingEllipsoid2022}. R5 neurons have been reported to play an important role in sleep regulation in the fruit flies. Specifically, these neurons are thought to encode the homeostatic sleep drive in these animals \parencite{liuSleepDriveEncoded2016}. Similar to mammals,
 \gls{swa} has been observed in \textit{Drosophila} brain during sleep and following sleep deprivation, and is believed to be generated at the level of the R5 neurons \parencite{raccugliaNetworkSpecificSynchronizationElectrical2019}. Furthermore, these neurons exhibit tonic spiking activity during the daytime, and bursting at night and after sleep deprivation \parencite{suarez-grimaltNeuralArchitectureSleep2021,liuSleepDriveEncoded2016}. 
 
 Despite these observations, the cellular mechanisms underlying R5 neuronal activity remain poorly understood. Gaining insight into these mechanisms is crucial for a better understanding of the cellular basis of sleep regulation in \textit{Drosophila}.
 In this study, conductance-based computational models were used to investigate the possible mechanisms responsible for several experimental findings related to the R5 activity.
 
-First, electrophysiological studies in R5 neurons of \textit{Drosophila} have reported that their activity switches from tonic firing during the daytime to bursting during sleep and following sleep deprivation \parencite{liuSleepDriveEncoded2016,suarez-grimaltNeuralArchitectureSleep2021}. A study on gene expression in \textit{Drosophila} identified a negative correlation between increased sleep drive and the expression of a gene encoding a potassium channel known as \gls{eag} \parencite{doppSinglecellTranscriptomicsReveals2024}. Current thesis demonstrated that variation in the expression of the \gls{eag} channel could be a biologically plausible mechanism underlying the transition of R5 activity from bursting to tonic spiking, where the latter results from the reduction in the number of spikes per burst.
+First, electrophysiological studies in R5 neurons of \textit{Drosophila} have reported that their activity switches from tonic firing during the daytime to bursting during sleep and following sleep deprivation \parencite{liuSleepDriveEncoded2016,suarez-grimaltNeuralArchitectureSleep2021}. A study on gene expression in \textit{Drosophila} identified a negative correlation between increased sleep drive and the expression of a gene encoding a potassium channel known as \gls{eag} \parencite{doppSinglecellTranscriptomicsReveals2024}. The current thesis demonstrated that variation in the expression of the \gls{eag} channel could be a biologically plausible mechanism underlying the transition of R5 activity from bursting to tonic spiking, where the latter results from the reduction in the number of spikes per burst.
 
-Second, an unpublished study on Drosophila R5 neurons by Anatoli Ender, and David Owald reported existence of slow oscillations (with the period on the order of a few seconds) following the blockade of $Na^+$ channels. These slow oscillations were hypothesized to be calcium spikes mediated by the T-type Ca$^{2+}$ channels. However, the results of the current study indicate that Ca$^{2+}$ channels alone cannot explain the observed slow-frequency ($<1$ Hz) oscillations due to their relatively fast kinetics. Therefore, other, or additional, mechanisms should be involved to account for the large interspike intervals.
+Second, an unpublished study on Drosophila R5 neurons by Anatoli Ender and David Owald reported the existence of slow oscillations (with the period on the order of a few seconds) following the blockade of Na$^+$ channels. These slow oscillations were hypothesized to be calcium spikes mediated by the T-type Ca$^{2+}$ channels. However, the results of the current study indicate that Ca$^{2+}$ channels alone cannot explain the observed slow-frequency ($<1$ Hz) oscillations due to their relatively fast kinetics. Therefore, other, or additional, mechanisms should be involved to account for the large interspike intervals.
 
-Third, another unpublished study of Anatoli Ender, and David Owald showed, that knockdown of the T-type calcium channels in R5 neurons causes increase in the minimal recorded membrane potential during bursting activity. This observation is unintuitive at the first glance, as calcium is a depolarizing current and removing it is expected to have an opposite (i.e. hyperpolarizing) effect.
-Simulations showed that Ca$^{2+}$-activated $K^+$ channels could be the underlying mechanism behind this observation. It was demonstrated, that these channels can explain experimental observations and cause increase in the minimal resting membrane potential following blockade of the T-type calcium channels.
+Third, another unpublished study of Anatoli Ender, and David Owald showed that knockdown of the T-type calcium channels in R5 neurons causes an increase in the minimal recorded membrane potential during bursting activity. This observation is unintuitive at first glance, as calcium is a depolarizing current and removing it is expected to have an opposite (i.e. hyperpolarizing) effect.
+Simulations showed that Ca$^{2+}$-activated K$^+$ channels could be the underlying mechanism behind this observation. It was demonstrated that these channels can explain experimental observations and cause an increase in the minimal resting membrane potential following blockade of the T-type calcium channels.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -24,15 +24,15 @@ Simulations showed that Ca$^{2+}$-activated $K^+$ channels could be the underlyi
 
 It has been shown that compound \gls{swa} in \textit{Drosophila} R5 neurons results from the synchronized activity of single R5 neurons \parencite{raccugliaNetworkSpecificSynchronizationElectrical2019}. \gls{swa} itself has been associated with sleep need, quality and sensory gating during sleep \parencite{suarez-grimaltNeuralArchitectureSleep2021,raccugliaNetworkSpecificSynchronizationElectrical2019,gentThalamicDualControl2018}. R5 neurons start bursting and synchronize their activity with increasing sleep need \parencite{suarez-grimaltNeuralArchitectureSleep2021}. 
 It has been reported that bursting can enhance the reliability of signal transmission by overcoming synaptic transmission failures, induce spikes more reliably in postsynaptic neurons, and influence synaptic plasticity more effectively in comparison to single spikes \parencite{lismanBurstsUnitNeural1997,kimBurstSynchronizationScalefree2019}.
-Thus, the transition between spiking and bursting could potentially fascilitate synchronization of R5 neurons and, consequently, generation of the compound \gls{swa} in \textit{Drosophila} central complex. However, the cellular mechanisms underlying this change in firing pattern are not yet fully understood.
+Thus, the transition between spiking and bursting could potentially facilitate synchronization of R5 neurons and, consequently, generation of the compound \gls{swa} in \textit{Drosophila} central complex. However, the cellular mechanisms underlying this change in firing pattern are not yet fully understood.
 
 Transition between tonic spiking and bursting has been studied in various animal models, including mammalian thalamocortical neurons \parencite{wangMultipleDynamicalModes1994,suzukiTtypeCalciumChannels1989,vickstromTTypeCalciumChannels2020,liuMultipleConductancesCooperatively2008,mccormickModelElectrophysiologicalProperties1992}. Different mechanisms have been proposed to achieve both types of activity in the same cell.
 
-The early work by Wang \parencite{wangMultipleDynamicalModes1994} proposed a model that exhibits bursting behaviour mediated by \gls{hcn} and T-type channels (see "T-type and \gls{hcn} channels" in Section \ref{subsubsec:ion_channel_contributions} for detalied description of corresponding bursting mechanism). In short, the \gls{hcn} and T-type channels form the slow subsystem, that first drives the membrane potential to the spiking threshold, and next to a hyperpolarized state. The strength of this drive depends on the magnitude of the hyperpolarizing external current: the stronger the hyperpolarizing current, the more \gls{hcn} channels activate and more T-type channels deinactivate (i.e. their inactivation gate opens). Apart from bursting, the model exhibits tonic spiking in two regimes. The first occurs when the hyperpolarizing current is too weak to fully activate the slow subsystem, resulting in a single spike. The Second occurs when the external current is depolarizing. In this case, the membrane potential is directly driven to the spiking threshold, resulting in tonic spiking at a frequency comparable to that within bursts.
+The early work by Wang \parencite{wangMultipleDynamicalModes1994} proposed a model that exhibits bursting behaviour mediated by \gls{hcn} and T-type channels (see "T-type and \gls{hcn} channels" in Section \ref{subsubsec:ion_channel_contributions} for detailed description of corresponding bursting mechanism). In short, the \gls{hcn} and T-type channels form the slow subsystem, that first drives the membrane potential to the spiking threshold, and then to a hyperpolarized state. The strength of this drive depends on the magnitude of the hyperpolarizing external current: the stronger the hyperpolarizing current, the more \gls{hcn} channels activate and more T-type channels deinactivate (i.e. their inactivation gate opens). Apart from bursting, the model exhibits tonic spiking in two regimes. The first occurs when the hyperpolarizing current is too weak to fully activate the slow subsystem, resulting in a single spike. The Second occurs when the external current is depolarizing. In this case, the membrane potential is directly driven to the spiking threshold, resulting in tonic spiking at a frequency comparable to that within bursts.
 
 However, the model proposed by Wang exhibits large variations in bursting frequency in response to small changes in the input current (see also Figure \ref{fig:rmp_models_phase}). Furthermore, the frequency of the tonic firing in R5 neurons is relatively low compared to the frequency of spikes within bursts (Figures \ref{fig:tmp_frequency_vs_zt} and \ref{fig:tmp_single_unit_r5_day_night}). Thus, the transition between tonic spiking and bursting in R5 neurons is less likely to be mediated by external input.
 
-Bursting is defined as a slow alternating transition between spiking and steady states \parencite{rinzelFormalClassificationBursting1987}, while tonic spiking refers to the periodic firing of single spikes. By definition, if the number of spikes per burst is reduced to one, the activity becomes indistinguishable from tonic spiking. Thus, a change in the excitability of R5 neurons between day and night may result in reduction in the number of spikes per burst, underlying the observed shift in the activity patterns.
+Bursting is defined as a slow alternating transition between spiking and steady states \parencite{rinzelFormalClassificationBursting1987}, while tonic spiking refers to the periodic firing of single spikes. By definition, if the number of spikes per burst is reduced to one, the activity becomes indistinguishable from tonic spiking. Thus, a change in the excitability of R5 neurons between day and night may result in a reduction in the number of spikes per burst, underlying the observed shift in the activity patterns.
 
 Several mechanisms have been proposed that reduce the number of spikes per burst, including upregulation of the A-type potassium channels, and downregulation of T- or L-type calcium channels \parencite{franciRobustTunableBursting2018,parkMathematicalModelSubthalamic2021}. Since potassium currents are hyperpolarizing, upregulation of the underlying channels opposes depolarization and can promote burst termination. Conversely, calcium currents are depolarizing, and downregulation of calcium channels may limit the ability to sustain bursting.
 
@@ -40,12 +40,12 @@ A recent study reported that expression of the gene encoding the potassium \gls{
 
 Indeed, simulations showed that increasing the maximal conductance of the \gls{eag} channel can induce a transition from bursting to tonic spiking by the above-described mechanism. Bifurcation analysis revealed that this transition is mediated by the modulation of the $V$-nullcline in the fast (i.e. spiking) subsystem. Specifically, increasing the maximal conductance of the \gls{eag} channel alters the geometry of the $V$-nullcline such that the system spends less time in the spiking state - the region of the phase space where a stable limit cycle exists (Figure \ref{fig:spiking_to_bursting_wang_bifurcation}).
 
-To investigate whether upregulation of the \gls{eag} channel could induce transition from bursting to tonic spiking, the parameters of the \gls{eag} channel were chosen such that its current does not significantly affect the bursting period. In the Wang model, this required a steep steady-state activation curve for the \gls{eag} channel, as the model exhibits large variations in bursting period with small changes in the external current (see also Figure \ref{fig:rmp_models_phase}). If the \gls{eag} channel is not fully deactivated during the interspike interval, it could effectively introduce an additional depolarizing current to the original Wang model (i.e., the model without the \gls{eag} channel) during the interspike interval, thus oppose depolarizing currents and, consequently, reduce the oscillation frequency, \textcolor{red}{as illustrated in Figure ...}.
+To investigate whether upregulation of the \gls{eag} channel could induce transition from bursting to tonic spiking, the parameters of the \gls{eag} channel were chosen such that its current does not significantly affect the bursting period. In the Wang model, this required a steep steady-state activation curve for the \gls{eag} channel, as the model exhibits large variations in bursting period with small changes in the external current (see also Figure \ref{fig:rmp_models_phase}). If the \gls{eag} channel is not fully deactivated during the interspike interval, it could effectively introduce an additional depolarizing current to the original Wang model (i.e., the model without the \gls{eag} channel) during the interspike interval, thus oppose depolarizing currents and, consequently, reduce the oscillation frequency.
 
-\color{red}
-By contrast, the Goldman model has been shown to be more robust to parameter variations and allows for more independent tuning of the spiking and resting states due to geometry of the nullclines of the corresponding system \parencite{franciRobustTunableBursting2018}.
-This may explain why adding the \gls{eag} channel into the Goldman model required less parameter adjustment to achieve the desired effect. However, a more detailed analysis, such as aggregation of slow variables \parencite{franciModelingModulationNeuronal2014}, would be necessary to fully understand this behaviour.
-\color{black}
+% \color{red}
+% By contrast, the Goldman model has been shown to be more robust to parameter variations and allows for more independent tuning of the spiking and resting states due to geometry of the nullclines of the corresponding system \parencite{franciRobustTunableBursting2018}.
+% This may explain why adding the \gls{eag} channel into the Goldman model required less parameter adjustment to achieve the desired effect. However, a more detailed analysis, such as aggregation of slow variables \parencite{franciModelingModulationNeuronal2014}, would be necessary to fully understand this behaviour.
+% \color{black}
 
 The above-mentioned requirement not to modulate the oscillation period is a strict requirement with regard to the R5 neurons. As illustrated in Figure \ref{fig:tmp_single_unit_r5_day_night}, the frequency power spectra of R5 neurons have peaks at lower frequencies than $1$ Hz (bursting frequency at night). Thus, this shift could potentially also be attributed to the upregulation of \gls{eag} channels during the daytime, in addition to variations in synaptic input from other neurons.
 
@@ -67,14 +67,14 @@ As discussed in Section \ref{subsubsec:bio_burst_onset_offset}, neurons that exh
 It has been shown that even for a fixed model structure (i.e. fixed set of ion channels, ion dynamics, etc.) variations in the maximal conductance of a single ion channel can lead to qualitatively different dynamical behaviours, even when the resulting voltage traces appear similar under baseline condition (i.e. prior to parameter variation) \parencite{alonsoVisualizationCurrentsNeural2019}.
 Thus, multiple mechanisms could the observed firing pattern in R5 neurons.
 
-As it will be discussed later, the proposed mechanisms for the transition of the activity between tonic spiking and bursting, and an increase in minimal recorded membrane potential following T-type channel knockdown, could, in principle, be generalized to all types of bursting models.
+% As it will be discussed later, the proposed mechanisms for the transition of the activity between tonic spiking and bursting, and an increase in minimal recorded membrane potential following T-type channel knockdown, could, in principle, be generalized to all types of bursting models.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Slow-freqeucny oscillations following $Na^{+}$ channel blockade}
+\subsection{Slow-freqeucny oscillations following Na$^+$ channel blockade}
 
-The slow-frequency spiking with a period of several seconds has been observed following $Na^+$ channel blockade and is hypothesized to be mediated by T-type calcium channels.
-Although these channels may be responsible for generating the spikes themselves, the long interspike intervals cannot be fully explained by the T-type current alone, given that the gating kinetics of these channels operate on a timescale of approximately $100$ ms \parencite{jeongCaa1TFlyTtype2015} \textcolor{red}{(see also Section ???)}.
+The slow-frequency spiking with a period of several seconds has been observed following Na$^+$ channel blockade and is hypothesized to be mediated by T-type calcium channels.
+Although these channels may be responsible for generating the spikes themselves, the long interspike intervals cannot be fully explained by the T-type current alone, given that the gating kinetics of these channels operate on a timescale of approximately $100$ ms \parencite{jeongCaa1TFlyTtype2015}.
 
 A potential mechanism underlying the slow interspike interval could involve the activation of a depolarizing current with slow kinetics, which gradually drives the membrane potential toward the spiking threshold. Alternatively, it could arise from a slowly deactivating hyperpolarizing current, which delays the dominance of depolarizing currents and postpones spike initiation.
 
@@ -104,18 +104,16 @@ The mechanism responsible for generating slow oscillations in R5 neurons followi
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Increase in resting membrane potential following T-type channel knockdown}
+\subsection{Increase in minimal resting membrane potential following T-type channel knockdown}
 
-\color{red}
+This finding is particularly interesting, as to my knowledge, such an effect of the T-type calcium channel knockdown on the minimum membrane potential has not been previously reported or modelled. In fact, the opposite effect has been demonstrated \cite{alonsoVisualizationCurrentsNeural2019}. One modelling study demonstrated that, for specific parameter combinations, the model exhibited an increase in the minimum membrane potential following T-type channel blockade. However, this effect was reversed once more than approximately 20\% of the channels were blocked. Notably, authors did not explicitly discuss this effect — it can only be seen in one of the figures.
 
-This was quite interesting finding as to my knowledge such effect of t-type knockdown on minimal membrane potential has not been reported before. Actually, quite the contrary has been reported (cite). 
-One of the modeling studies illustrated that in specific parameter ranges the model that they had could result in increase of minimal membrane potential in relatively narrow range (approx, 80\% blockade). Noteworthy, this study did not concentrate on this behavior at all. It is just one of their plots showed that. Because the dynamics are strongly affected by parameters and there are many many parameters, the results of the computational studies cannot guartee that such effect is not plausible. First, one needs to find specific parameter regime. Second, one should concentrate on specific detail. It can be the case, that some of the models has this effect, but it was just not reported.
+In this work, it was demonstrated that calcium-activated potassium channels can underlie this experimental observation. If the current through such ion channel is strong enough, then reducing calcium influx will result in reduced activation of these channels, and, thereby, reduced hyperpolarizing drive. The reduced hyperpolarizing drive, on the other hand, can cause the minimal membrane potential to go to more depolarized levels.
 
-And this contrary is the intuitive one. Since calcium is depolarizing current, removing it should be expected. This might suggest calium dependent process.
+As the conductance-based models are high-dimensional, I am not aware of any method which could be used to fully describe the response properties of neurons to all parameter variations. Identification of such behaviour of the dynamical system requires careful examination of specific parameter regimes, and attention to specific details, such as minimal membrane potential. Thus, it is possible that other models than the Goldman may exhibit the above-described effect, but it might not have been explored due to a focus on other research questions.
 
-This does not necessarily imply that the bursting has to be stopped by KCa channels. Theoretically, similar effect should be observed regardless of the bursting mechanism. However, more work should be done to investigate this and can be one of the goals of the future work.
-
-\color{black}
+The Goldman model exhibits burst termination due to calcium-activated potassium channels.
+Importantly, our result does not necessarily imply that bursting must be terminated via calcium-activated potassium channels. In principle, a similar effect on minimum membrane potential could be observed regardless of the underlying bursting mechanism. However, further investigation is necessary, and this question can be a direction for future research.
 
 % RMP depolarized following SD (Connection to T-Type channels and increased RMP in knockdown.
 %     Effect of affector circuits following SD, as Ca gated K channels should have the opposite effect ???)
@@ -125,139 +123,73 @@ This does not necessarily imply that the bursting has to be stopped by KCa chann
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Limitations of current approach}
 
-These have been identified, but still needs to be put together to construct one model. It is unknown whether such parameter set exist for ion channel + calcium dynamics, or some other aspects should be modelled? Like multiple compartment??? Or maybe other mechanisms, such as calcium dependent synaptic plasticiy is required? Or modulation of other channels besides EAG?
+Although the current work suggests involvement of specific ion channels to reproduce the observed R5 neuronal responses, there are several limitations to the approach.
 
-T-Type ca channels are located at presynaptic terminals. What is the consequence?
+First, the proposed mechanisms behind the experimental observation are single examples of how the experimental observation could be reproduced with a modelling approach. Other, more complex mechanisms may involve calcium-dependent modulation of synaptic strength or gene expression. 
 
-\parencite{blumAstroglialCalciumSignaling2021}: astrocytes and Toll receptors on R5 neurons.
-    Toll might trigger gene expression (??? Need a bit more literature research)
+Second, the current study concentrated on single-compartment conductance based models. Such models assume uniform distribution of the ion channels across a neuron, as well as do not account for morphology. It has been shown that models that account for these fit experimental data better and can be more robust to parameter variations \parencite{destexheDendriticLowthresholdCalcium1998}.
 
-Single compartment
-
-Calcium release in cytosole
-
-Although it was not investigated in this thesis because of the limited amount of time, the proposed mechanisms of transition between spiking and bursting, as well as increase in minimal membrane potential following T-type channel blockade should not in general depend on type of bursting (intrinsic vs forced, tonic vs inhibition-rebound).
-Wang - interplay between h and T-type, Goldman - termination by KCa.
-
-Cannot explain if T-type channels mediate for bursting
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Considerations for modeling R5 neurons}
-
-\begin{itemize}
-    \item In conntrast to three-compartment mmodel, single-compartment model could only estimate either I-V relationship, or LTS, but not both,
-    with LTS observed in case of increased maximal conductance of T-Type channels. \parencite{destexheDendriticLowthresholdCalcium1998}
-\end{itemize}
-
-Furthermore, for simplicity, single compartment conductance based model was chosen.
-Such model 1) does not account for dendritic computations, and 2) assumes uniform distribution of
-ion channels. \textcolor{green}{Nonlinear interactions in the multi-compartment model might better explain
-the experimental results without need of L-Type Ca$^{2+}$ currents.}
-
-Single and three compartment neuron model - Destexhe \parencite{destexheDendriticLowthresholdCalcium1998}.
-
-Different models
-\begin{itemize}
-    \item Ion channels
-    \item Same model, different parameter regimes
-    \item If not mediated by t-type, they do not include T-Type channels
-    \item Different goals: inhibition rebound vs induced bursting
-    \item Slow variable for calcium oscillations
-    \item Misreported parameters (HM neuron in paper and in one thesis)
-\end{itemize}
-
-Tuning the parameters of conductance based model to produce specific dynamical characteristic is a hard problem. First, due to large number of parameters, investigating every parameter combination even in the constrained parameter space is computationally inefficient. Second, predicting the effects of an arbitrary parameter perturbation on the solution is challenging and largely unresolved problem \cite{alonsoVisualizationCurrentsNeural2019}. Several approaches have been proposed to find parameters reproducing the desired dynamics. Prinz and colleagues constructed a database of 1.7 million single-compartment neurons by individually varying $8$ maximal conductances for one particular model of choice \parencite{prinzAlternativeHandTuningConductanceBased2003}. Others proposed using evolutionary algorythms to find set of parameter combinations leading to similar voltage responses in model neurons \cite{alonsoVisualizationCurrentsNeural2019}. It has been demonstrated that such multiple parameter combinations can result in qualitatively same membrane potential dynamics, even within the same single-compartment model \cite{alonsoVisualizationCurrentsNeural2019}.
-
-Neurons differ by expression of ion channels, location of ion channels, concentrations. Thus,
-different models incorporate different ion channels and max conductances depending on neuron of interest
-
-It is hard to fit generally, as the ion channel dynamics overlap - e.g. extending time constant
-might affect other currents and fitting might be the best method
-
-Thing to fit the neurons (blue thing, find what it was)
-
-Different effects with changing one variable also is observed when two parameters are varied (my plot) :D Now you can imagine what will happen in higher dimensions :D
-
-\begin{figure}[!t]
-    \centering
-    \includegraphics[width=0.55\linewidth]{../img/modeling_r5/examples/drosophila_neuron_morphology.png}
-    \caption[Neuron morphology in \textit{Drosophila} and Vertebrates]{
-        \textbf{Comparison of neuron morphology in \textit{Drosophila} and Vertebrates.}
-        In comparison to vertebrates,
-        the neurons in \textit{Drosophila} have unipolar morphology. Therefore synaptic potentials
-        travelling from the dendrites (red) to spike initiation zone bypass cell body
-        (blue circle). Figure adapted from \parencite{spindlerBazookaMediatesSecondary2011}.
-    }
-    \label{fig:morphology_drosphila_vs_mammalian}
-\end{figure}
-
-Although R5 neurons share similar functional characteristits with thalamic neurons,
-morphology of neurons in \textit{Drosophila} is significantly different from those in vertebrates
-\ref{fig:morphology_drosphila_vs_mammalian}. 
+Although R5 neurons share similar functional characteristics with thalamic neurons,
+morphology of neurons in \textit{Drosophila} is significantly different from those in vertebrates. 
 Unlike vertebrates, \textit{Drosophila} neurons have unipolar morphology. Because of this morphology,
-synaptic potentials travelling from dendrites to spike initiation zone bypass cell body.
+synaptic potentials traveling from dendrites to the spike initiation zone bypass the cell body.
 Because of this morphology, the cell body of \textit{Drosophila} neurons is
 electronically segregated from other cell regions, suggesting that it is not involved
 in synaptic integration \parencite{gouwensSignalPropagationDrosophila2009,tuthillLessonsCompartmentalModel2009}.
 Furthermore, it has been found that, in contrast to vertebrates, dendrites of
-\textit{Drosophila} neurons (slecifically, \gls{kc}) are not solely postsynaptic, but
+\textit{Drosophila} neurons (specifically, \gls{kc}) are not solely postsynaptic, but
 also form presynaptic active zones \parencite{christiansenPresynapsesKenyonCell2011}.
+Thus, the single-compartment model might be too simple to fully explain experimental observations.
 
-Multcompartment: increases robustness to parameter variations
+Furthermore, as described in Section \ref{sec:sleep_and_r5_network}, the experimental studies found a reversible increase in cytosolic calcium concentration in R5 neurons in the morning, evening, and following sleep deprivation (andreaniCircadianProgrammingEllipsoid2022,liuSleepDriveEncoded2016). 
+Increased calcium levels may be attributed to the increased calcium influx through T-type channels during night and sleep deprivation. However, as discussed in Section \ref{subsubsec:transit_tonic_burst}, release of calcium from \gls{eb} might be an alternative mechanism contributing to the increase in intracellular calcium levels.
 
-Same model could exhibit different type of bursting in relation to external current (tonic, inhibition-rebound...) depending on parameter regime \parencite{parkMathematicalModelSubthalamic2021}.
+Although this work did not concentrate on the possible effects of diurnal variation of intracellular calcium concentration, this could be an additional mechanism that may modulate R5 activity. However, it still remains unclear if and to what extent increased level of calcium can affect the response properties of R5 neurons.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Furthermore, what is the mechanism behind burst initiation and termination in R5 neurons still remains unclear. It is hard to address this question by conductance-based models, as, even in the same model, many different parameter combinations may lead to the model exhibiting the same voltage characteristics \cite{alonsoVisualizationCurrentsNeural2019, prinzAlternativeHandTuningConductanceBased2003}.
 
+Tuning the parameters of a conductance-based model to produce specific dynamical characteristics is a hard problem. First, due to large number of parameters, investigating every parameter combination even in the constrained parameter space is computationally inefficient. Second, predicting the effects of an arbitrary parameter perturbation on the solution is a challenging and largely unresolved problem \parencite{alonsoVisualizationCurrentsNeural2019}. Several approaches have been proposed to find parameters reproducing the desired dynamics. Prinz and colleagues constructed a database of 1.7 million single-compartment neurons by individually varying $8$ maximal conductances for one particular model of choice \parencite{prinzAlternativeHandTuningConductanceBased2003}. Others proposed using evolutionary algorithms to find a set of parameter combinations leading to similar voltage responses in model neurons \parencite{alonsoVisualizationCurrentsNeural2019}. It has been demonstrated that such multiple parameter combinations can result in qualitatively the same membrane potential dynamics, even within the same single-compartment model \parencite{alonsoVisualizationCurrentsNeural2019}.
 
-Did not incorporate calcium in day/night - calcium activates k dependent K channels + effectively modulates calcium channel strength -> Thus the effect might be even better
-
-Calcium is important in cellular processes (liu)
-
-KCa channel may be important and calcium can be important here as well
-
-EAG channel may be important
-
-Although for many bursting neurons H current is necessary (blocking of H current blabla, find literature)
-it is not mandatory for \gls{ahp} (image from Izhikevich book and models that have ahp but still
-have very nice bursts or ahp).
-
-T-type modelling - GHK model might be better :))))))
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Summary and outlook}
 
-EAG is potential mechanism, we need something else for slow oscillations, calcium dependent potassium channel may contribute.
+The current work showed that variation of the EAG channel in response to the increased sleep drive is a biologically plausible mechanism to switch R5 neuronal activity from tonic spiking during the day to bursting at night. However, experimental verification is necessary to verify this computational result.
 
-Number of spikes per burst, burst width, ...
+Within this thesis, parameters of the EAG channel were hand-tuned to observe the switch between spiking to bursting without affecting the oscillation period. Although, as discussed above, this condition might not be necessary, what conditions should be met the EAG channels to exhibit such a modulatory effect should be investigated.
 
-It is not known how R5 neurons burst. However, the proposed mechanisms are potentially not constrained to a single bursting model and potentially could be generalized to other bursting mechanisms.
+Furthermore, switching to bursting activity at night has been suggested to facilitate compound SWA in R5 neurons. If variation of EAG channel expression induces a swich from tonic firing to bursting,
+can one induce synchronization within R5 neurons by changing the maximal conductance of the EAG channels? This question is yet to be investigated. 
 
-Width of the burst? Slow oscillations? Synchronisation and how eag affects it? Increase in synchronization with TUBU? Helicon cells and R5 - filtering viual information? dFSB fascilitating sleep via inhibition of helicon cells?
+As presented in Section \ref{sec:sleep_and_r5_network}, oscillatory power in R5 neurons increases following sleep deprivation in comparison to sleep. If the upregulation of the EAG channel causes R5 neurons to synchronize, the increased power following sleep deprivation might be due to increased external drive from R5 presynaptic neurons.
 
-\parencite{krummSlowlyOscillatingBrain2021} implemented R5 and helicon cells based
-on Izhikevich model of burstin neurons \parencite{izhikevichSimpleModelSpiking2003}.
+Another experimental observation reported by Anatoli Ender and David Owald showed an increase in the minimal resting membrane potential following T-type calcium channel knockdown. To my knowledge, such an effect has never been studied. Current work demonstrated that calcium-activated potassium channels can be the possible mechanism underlying such an effect. Although this was demonstrated on the model, which exhibited burst termination through Ca$^{2+}$-activated K$^+$ channels, this mechanism could potentially work for other types of bursting neurons as well, regardless of the mechanism for burst termination. It would be interesting to test this hypothesis on different bursting neuronal models and investigate what are the possible limitations of the approach.
 
-\parencite{krummSlowlyOscillatingBrain2021} suggested the inhibitory synapses between R5 and
-helicon cells to explain this observation.
+The third experimental observation, which was addressed in this work, was slow oscillations in the membrane potential following sodium channel blockade. Contrary to the hypothesis, the current work showed that the slow component of the oscillations cannot be mediated solely by the T-type calcium channels.
+Although what mechanism that causes the spike onset is still unclear, the results suggest involvement of a slower mechanism than the kinetic time constants of the T-type channels. One such mechanism was suggested above. However, more experimental and modelling studies should be carried out to investigate underlying cellular processes that can cause these slow oscillations.
 
-
-Blocking NMDR - irregular interburst interval, controls - regular.
-    Chaos??? (further support for square-wave)
-    \parencite{raccugliaNetworkSpecificSynchronizationElectrical2019,izhikevichNEURALEXCITABILITYSPIKING2000}
+Although the work suggests several mechanisms that might govern responses of R5 neurons, more work should be done to construct a biologically plausible model for the R5 neuron that could exhibit all of the above-mentioned response features. Furthermore, the current study did not concentrate on modelling the details of R5 responses, such as, temporal width of the bursts, or the number of spikes per burst. Currently, there is a limited amount of experimental and modelling studies on cellular mechanisms behind R5 responses. Nevertheless, the present work represents a step towards bridging this gap.
 
 
-Nonlinearities and opposite effects: such parameter range have been found in the investigated models as well, but was not analyzed within the scope of this thesis. Are these regions model or parameter/range specific? To what extent?
+% It is not known how R5 neurons burst. However, the proposed mechanisms are potentially not constrained to a single bursting model and potentially could be generalized to other bursting mechanisms.
 
-EAG - transition between spiking and resting, dFSB - increased oscillatory power following SD
+% Width of the burst? Slow oscillations? Synchronisation and how eag affects it? Increase in synchronization with TUBU? Helicon cells and R5 - filtering viual information? dFSB fascilitating sleep via inhibition of helicon cells?
 
-EAG - and shift of the power spectra peak (oscillation freuqnecy) to lower values
+% \parencite{krummSlowlyOscillatingBrain2021} implemented R5 and helicon cells based
+% on Izhikevich model of burstin neurons \parencite{izhikevichSimpleModelSpiking2003}.
 
-Slow oscillation - modeling
+% \parencite{krummSlowlyOscillatingBrain2021} suggested the inhibitory synapses between R5 and
+% helicon cells to explain this observation.
 
-\color{red}
+
+% EAG - transition between spiking and resting, dFSB - increased oscillatory power following SD
+
+% EAG - and shift of the power spectra peak (oscillation freuqnecy) to lower values
+
+% Slow oscillation - modeling
+
+% nonplausible CaK for reduction of V\_min for WANG???
+
+% \color{red}
 
 % ------------------------------
 % IMPORTANT!!!:
@@ -373,14 +305,14 @@ Slow oscillation - modeling
 
 
 
-Do the simulations with noninstantaneous activation for Wang model - maybe the transition between
-spiking and resting will be easier
+% Do the simulations with noninstantaneous activation for Wang model - maybe the transition between
+% spiking and resting will be easier
 
-Maybe try to hand-tune one TTX oscillation and then use optimisation to fit others
+% Maybe try to hand-tune one TTX oscillation and then use optimisation to fit others
 
-Slow oscillations in small parameter region - input current is important, as it only affects the V-nullcline. You change it, you move away - you move away from the slow manifold if the trajectory passes along it.
+% Slow oscillations in small parameter region - input current is important, as it only affects the V-nullcline. You change it, you move away - you move away from the slow manifold if the trajectory passes along it.
 
-switching from day to night will not depend on type of bursting
+% switching from day to night will not depend on type of bursting
 
 
 % \item The sharp transient at the end of the pulse in recordings (Fig. \ref{fig:i_v_relationship_jeong})
